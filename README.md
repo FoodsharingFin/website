@@ -9,7 +9,6 @@
     └── timeline.json
 
 Open tasks: 
-- remove About us
 - adjust about us (add download buttom for market infromation + link to where we have been mentioned (maybe as scalable sections??)
   - language switching feature + validation
 - adjust icons size 
@@ -20,3 +19,12 @@ Open tasks:
 Quetions Ronja: 
 - translationss, fonttype
 - 
+
+about the timeline: 
+
+events: 
+- particpations (Hack a debate, cook out)
+- memerbships (
+- awards
+- new cooperation 
+- founding 
