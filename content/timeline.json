@@ -1,27 +1,82 @@
 [
   {
-    "year": "2016",
-    "title": "First sharing point",
-    "description": "The first Foodsharing point opens in Tartu, bringing the German model to Estonia."
+    "year": "March 2024",
+    "title": "Aalto Foodsharing launches",
+    "description": "Aalto Foodsharing officially starts, beginning regular food pickups in collaboration with local partners including K-Market and BakedByEli."
   },
   {
-    "year": "2018",
-    "title": "Growing the network",
-    "description": "New locations added across the city, reaching more neighbourhoods and partnering with local businesses."
+    "year": "Late 2024",
+    "title": "Cargo bike acquired",
+    "description": "A cargo bike joins the operation, enabling larger food pickups and becoming a centrepiece at public events."
   },
   {
-    "year": "2020",
-    "title": "Refrigerated points",
-    "description": "Several points upgraded with refrigerators, allowing fresh and dairy products to be shared safely."
+    "year": "January 2025",
+    "title": "Aalto Restaurant Committee presentation",
+    "description": "Team members present Foodsharing to the Aalto Restaurant Committee, sparking interest from Sodexo and other campus food service providers."
   },
   {
-    "year": "2022",
-    "title": "Community milestone",
-    "description": "Thousands of kilograms of food rescued. The volunteer base grows and public awareness increases."
+    "year": "January 2025",
+    "title": "Oulu Food Waste Festival",
+    "description": "Three members represent A!FS at the Oulu Food Waste Festival organised by Dodo, gaining visibility among the Finnish foodsharing community and connecting with national actors."
   },
   {
-    "year": "2024",
-    "title": "9 000 kg rescued",
-    "description": "Over 9 000 kg of food saved from the bin. Five active points now operate across Tartu with 30+ volunteers."
+    "year": "March 2025",
+    "title": "SAB Bazaar pop-up stand",
+    "description": "A!FS runs a pop-up stand at the SAB Bazaar, making smoothies with the cargo bike and reaching students who had not heard of Foodsharing before."
+  },
+  {
+    "year": "March 2025",
+    "title": "Transition Town Network Finland",
+    "description": "Ronja presents our volunteer coordination model via Karrot as a best-practice example at the national Transition Town Network gathering."
+  },
+  {
+    "year": "April 2025",
+    "title": "Food Conservation Workshop Series",
+    "description": "A series of hands-on workshops covers pickling, lacto-fermentation, fruit leather, and bread pasta — connecting new people with food sustainability practices every Saturday."
+  },
+  {
+    "year": "April 2025",
+    "title": "Food System Talk with Joel Tefke",
+    "description": "A public talk on circular food systems draws 50 registrations and around 30 attendees — the first larger public event organised by A!FS."
+  },
+  {
+    "year": "August 2025",
+    "title": "Orientation Week outreach",
+    "description": "A!FS runs stands at Ota-Orienteering (two days) and Aalto Fest, reaching new students with flyers, patches, and the cargo bike."
+  },
+  {
+    "year": "September 2025",
+    "title": "Tipping Point sustainability conference",
+    "description": "A!FS is represented at a critical sustainability round table in Helsinki, gaining further visibility in the city's sustainability network."
+  },
+  {
+    "year": "December 2025",
+    "title": "Community celebration & ID launch",
+    "description": "A Christmas cookout at the Design Factory brings partners and members together. Foodsharer IDs are distributed for the first time."
+  },
+  {
+    "year": "January 2026",
+    "title": "Dodo Urban Dinners",
+    "description": "A!FS supplies dumpster-dived food for Dodo's Urban Dinner events. Around 15 attendees at one dinner express interest in food saving — seeding a potential Helsinki Hub."
+  },
+  {
+    "year": "February 2026",
+    "title": "Foodsharing Kick-Off event",
+    "description": "A public kick-off at the Design Factory recruits new foodvisionaries using a Cluedo-style game to explain roles and operations."
+  },
+  {
+    "year": "March 2026",
+    "title": "Dumpster diving intro for Extinction Rebellion",
+    "description": "A!FS hosts a dumpster diving introduction for 10 members of Extinction Rebellion, broadening the movement's reach into climate activism networks."
+  },
+  {
+    "year": "30 March 2026",
+    "title": "World Overshoot Day action — 376K reach",
+    "description": "A joint action with Elokapina and Onni Tonkija at Helsinki railway station goes viral: 376K views (6% of Finland's population), 13.5K likes, 340 new followers, and 16 people indicate interest in joining the organising team."
+  },
+  {
+    "year": "April 2026",
+    "title": "Foodsharing Helsinki takes shape",
+    "description": "A new community fridge opens in collaboration with Dodo. Partners in Pasila are contacted, and an open strategy meetup is planned to integrate Foodsharing Helsinki and Aalto Foodsharing into a city-wide network."
   }
 ]
