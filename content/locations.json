@@ -2,7 +2,7 @@
   {
     "name": "Aalto Väre Fridge",
     "description": "Our main community fridge is located on the ground floor of the Aalto Väre building. Once you have entered through the main lobby, go down the stairs, take the sharp right-hand turn at the bottom and go all the way to the end of the hallway. Take one more turn to the right and you will be in front of the room!",
-    "image": "illustrations/CommunityFridge.png",
+    "image": "CommunityFridge.png",
     "google_maps": "https://maps.app.goo.gl/BTwG8b36kKgwrBHBA",
     "open_street_map": "https://www.openstreetmap.org/?#map=19/60.185189/24.825057"
   }
