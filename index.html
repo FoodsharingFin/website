@@ -12,24 +12,24 @@
       theme: {
         extend: {
           colors: {
-            "surface":               "#fdf9ec",
-            "surface-container":     "#f2eee1",
-            "surface-container-low": "#f8f3e6",
-            "surface-container-high":"#ece8db",
+            "surface":                  "#fdf9ec",
+            "surface-container":        "#f2eee1",
+            "surface-container-low":    "#f8f3e6",
+            "surface-container-high":   "#ece8db",
             "surface-container-lowest": "#ffffff",
-            "on-surface":            "#1c1c14",
-            "on-surface-variant":    "#434939",
-            "surface-variant":       "#e6e2d6",
-            "outline":               "#737968",
-            "outline-variant":       "#c3c9b5",
-            "primary":               "#406900",
-            "primary-container":     "#80b341",
-            "on-primary-container":  "#264200",
-            "primary-fixed":         "#bcf379",
-            "on-primary-fixed":      "#102000",
-            "secondary":             "#934938",
-            "secondary-container":   "#fea18b",
-            "tertiary":              "#635e55",
+            "on-surface":               "#1c1c14",
+            "on-surface-variant":       "#434939",
+            "surface-variant":          "#e6e2d6",
+            "outline":                  "#737968",
+            "outline-variant":          "#c3c9b5",
+            "primary":                  "#406900",
+            "primary-container":        "#80b341",
+            "on-primary-container":     "#264200",
+            "primary-fixed":            "#bcf379",
+            "on-primary-fixed":         "#102000",
+            "secondary":                "#934938",
+            "secondary-container":      "#fea18b",
+            "tertiary":                 "#635e55",
           },
           fontFamily: {
             headline: ["Space Grotesk"],
@@ -54,21 +54,20 @@
 <nav class="fixed top-0 w-full z-50 bg-[#fdf9ec]/90 backdrop-blur-md border-b border-[#c3c9b5]/30">
   <div class="flex justify-between items-center px-6 md:px-10 py-4 max-w-6xl mx-auto">
     <a href="#" class="flex items-center gap-3">
-      <img src="illustrations/logo.png" alt="Aalto Foodsharing logo" class="h-8"
-           onerror="this.style.display='none'"/>
+      <img src="illustrations/logo.png" alt="Aalto Foodsharing logo" class="h-8" onerror="this.style.display='none'"/>
       <span class="font-headline text-xl font-bold text-primary tracking-tight">Aalto Foodsharing</span>
     </a>
     <div class="hidden md:flex items-center gap-8 font-headline font-semibold text-sm">
-      <a href="#"          class="text-primary border-b-2 border-primary pb-0.5">Home</a>
-      <a href="#about"     class="text-on-surface-variant hover:text-primary transition-colors">About</a>
-      <a href="#locations" class="text-on-surface-variant hover:text-primary transition-colors">Locations</a>
-      <a href="#timeline"   class="text-on-surface-variant hover:text-primary transition-colors">Timeline</a>
-      <a href="#faq"       class="text-on-surface-variant hover:text-primary transition-colors">FAQ</a>
+      <a href="#"          class="text-primary border-b-2 border-primary pb-0.5" data-i18n="nav_home">Home</a>
+      <a href="#about"     class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_about">About</a>
+      <a href="#locations" class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_locations">Locations</a>
+      <a href="#timeline"  class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_timeline">Timeline</a>
+      <a href="#faq"       class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_faq">FAQ</a>
     </div>
-    <div class="flex items-center gap-4">
-      <div class="text-xs font-bold text-secondary uppercase tracking-widest">
-        <span class="border-b border-secondary">EN</span> | <a href="https://www.foodsharing.ee/" class="hover:text-primary">FI</a> 
-      </div>
+    <div class="flex items-center gap-2 text-xs font-bold text-secondary uppercase tracking-widest">
+      <button id="lang-en" onclick="setLang('en')" class="px-1 py-0.5 hover:text-primary transition-colors">EN</button>
+      <span class="text-outline-variant">|</span>
+      <button id="lang-fi" onclick="setLang('fi')" class="px-1 py-0.5 hover:text-primary transition-colors">FI</button>
     </div>
   </div>
 </nav>
@@ -80,20 +79,19 @@
       <h1 class="font-headline text-5xl md:text-7xl font-bold text-primary leading-[0.95] tracking-tighter mb-6">
         Aalto<br/><span class="text-secondary">Foodsharing</span>
       </h1>
-      <p class="text-xl text-on-surface-variant leading-relaxed mb-8 max-w-lg">
-        Foodsharing encourages people to share leftover food that would otherwise go to the trash.
-        We save &amp; share food!
+      <p class="text-xl text-on-surface-variant leading-relaxed mb-8 max-w-lg" data-i18n="hero_subtitle">
+        Foodsharing encourages people to share leftover food that would otherwise go to the trash. We save &amp; share food!
       </p>
       <div class="flex flex-wrap gap-4">
-        <a href="https://foodsharingfin.github.io/dynlink/?id=tg_main" class="bg-primary-container text-on-primary-container px-7 py-3 font-bold font-headline flex items-center gap-2 hover:opacity-90 transition-opacity">
-          Join the rescue!
+        <a href="https://foodsharingfin.github.io/dynlink/?id=tg_main"
+           class="bg-primary-container text-on-primary-container px-7 py-3 font-bold font-headline flex items-center gap-2 hover:opacity-90 transition-opacity">
+          <span data-i18n="hero_cta">Join the rescue!</span>
           <span class="material-symbols-outlined text-base">arrow_forward</span>
         </a>
       </div>
     </div>
     <div class="flex justify-center lg:justify-end">
       <img src="illustrations/AaltoFoodSharing-logo_B.png"
-      
            alt="Foodsharing main logo"
            class="w-64 md:w-80 opacity-80"/>
     </div>
@@ -103,29 +101,25 @@
 <!-- ── Stats ──────────────────────────────────────────────────── -->
 <section class="bg-surface-container-low py-16 px-6 md:px-10">
   <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
-    
     <div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest border border-outline-variant/20 rounded-lg">
-      <img src="illustrations/GiftEconomy.png" alt="Sharing Points" class="w-12 h-12 mb-3 object-contain">
+      <img src="illustrations/GiftEconomy.png" alt="" class="w-12 h-12 mb-3 object-contain">
       <div class="font-headline text-4xl font-bold text-secondary mb-1">2</div>
-      <div class="text-xs font-bold uppercase tracking-widest text-tertiary">Sharing Points</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-tertiary" data-i18n="stat_points">Sharing Points</div>
     </div>
-
     <div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest border border-outline-variant/20 rounded-lg">
-      <img src="illustrations/Foodsaver.png" alt="Partners" class="w-10 h-10 mb-3 object-contain">
+      <img src="illustrations/Foodsaver.png" alt="" class="w-10 h-10 mb-3 object-contain">
       <div class="font-headline text-4xl font-bold text-secondary mb-1">3</div>
-      <div class="text-xs font-bold uppercase tracking-widest text-tertiary">Partners</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-tertiary" data-i18n="stat_partners">Partners</div>
     </div>
-
     <div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest border border-outline-variant/20 rounded-lg">
-      <img src="illustrations/PeoplePower.png" alt="Volunteers" class="w-12 h-12 mb-3 object-contain">
+      <img src="illustrations/PeoplePower.png" alt="" class="w-12 h-12 mb-3 object-contain">
       <div class="font-headline text-4xl font-bold text-secondary mb-1">30+</div>
-      <div class="text-xs font-bold uppercase tracking-widest text-tertiary">Volunteers</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-tertiary" data-i18n="stat_volunteers">Volunteers</div>
     </div>
-
     <div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest border border-outline-variant/20 rounded-lg">
-      <img src="illustrations/EarthCare.png" alt="Rescued Food" class="w-12 h-12" mb-3 object-contain">
-      <div class="font-headline text-4xl font-bold text-secondary mb-1">3 000+</div>      
-      <div class="text-xs font-bold uppercase tracking-widest text-tertiary">kg Rescued</div>
+      <img src="illustrations/EarthCare.png" alt="" class="w-12 h-12 mb-3 object-contain">
+      <div class="font-headline text-4xl font-bold text-secondary mb-1">3 000+</div>
+      <div class="text-xs font-bold uppercase tracking-widest text-tertiary" data-i18n="stat_rescued">kg Rescued</div>
     </div>
   </div>
 </section>
@@ -134,35 +128,34 @@
 <section id="about" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
     <div>
-      <h2 class="font-headline text-4xl font-bold text-primary mb-8 tracking-tight">About Us</h2>
-      <div class="space-y-5 text-on-surface-variant leading-relaxed"> <strong class="text-on-surface">not a charity.</strong>
-        <p>Foodsharing is a global movement aimed at reducing food waste together with businesses such as stores and restaurants to prevent edible food from being discarded.</p>
-        <p>Aalto Foodsharing (A!FS)is a grassroots initiative in Otaniemi dedicated to minimizing food waste, sharing food among students, and fostering a sustainability-focused community. We maintain a campus community fridge, conduct regular food pickups, and organize Foodsharing events.  </p>
-    
+      <h2 class="font-headline text-4xl font-bold text-primary mb-8 tracking-tight" data-i18n="about_title">About Us</h2>
+      <div class="space-y-5 text-on-surface-variant leading-relaxed">
+        <p data-i18n="about_p1">Foodsharing is a global movement aimed at reducing food waste together with businesses such as stores and restaurants to prevent edible food from being discarded.</p>
+        <p data-i18n="about_p2">Aalto Foodsharing (A!FS) is a grassroots initiative in Otaniemi dedicated to minimizing food waste, sharing food among students, and fostering a sustainability-focused community. We maintain a campus community fridge, conduct regular food pickups, and organize Foodsharing events.</p>
       </div>
     </div>
     <div>
-      <h2 class="font-headline text-4xl font-bold text-primary mb-8 tracking-tight">What we do</h2>
+      <h2 class="font-headline text-4xl font-bold text-primary mb-8 tracking-tight" data-i18n="whatwedo_title">What we do</h2>
       <ul class="space-y-5">
         <li class="flex gap-4">
           <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-          <span class="text-on-surface-variant">Distribute leftover food at A!FS community fridges</span>
+          <span class="text-on-surface-variant" data-i18n="whatwedo_1">Distribute leftover food at A!FS community fridges.</span>
         </li>
         <li class="flex gap-4">
           <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-          <span class="text-on-surface-variant">Rescuse edible food in collabration with supermarkets and restauants.</span>
+          <span class="text-on-surface-variant" data-i18n="whatwedo_2">Rescue edible food in collaboration with supermarkets and restaurants.</span>
         </li>
         <li class="flex gap-4">
           <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-          <span class="text-on-surface-variant">Advocate for local food waste reduction.</span>
+          <span class="text-on-surface-variant" data-i18n="whatwedo_3">Advocate for local food waste reduction.</span>
         </li>
         <li class="flex gap-4">
           <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-          <span class="text-on-surface-variant">Organise events such as food preservation workshops or community dinnersContinuously look for new partners and collaborators.</span>
+          <span class="text-on-surface-variant" data-i18n="whatwedo_4">Organise events such as food preservation workshops and community dinners.</span>
         </li>
         <li class="flex gap-4">
           <span class="material-symbols-outlined text-secondary shrink-0" style="font-variation-settings:'FILL' 1">check_circle</span>
-          <span class="text-on-surface-variant">Coordinate with other sustainabilty organsisations.</span>
+          <span class="text-on-surface-variant" data-i18n="whatwedo_5">Coordinate with other sustainability organisations.</span>
         </li>
       </ul>
     </div>
@@ -171,8 +164,8 @@
 
 <!-- ── Locations ─────────────────────────────────────────────── -->
 <section id="locations" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
-  <h2 class="font-headline text-4xl font-bold text-primary mb-4 tracking-tight">Where to find us</h2>
-  <p class="text-on-surface-variant mb-12 max-w-2xl">Our sharing points are open to everyone. Please follow the hygiene rules posted at each location.</p>
+  <h2 class="font-headline text-4xl font-bold text-primary mb-4 tracking-tight" data-i18n="locations_title">Where to find us</h2>
+  <p class="text-on-surface-variant mb-12 max-w-2xl" data-i18n="locations_subtitle">Our sharing points are open to everyone. Please follow the hygiene rules posted at each location.</p>
   <div id="locations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     <!-- Injected by locations.json -->
   </div>
@@ -181,7 +174,7 @@
 <!-- ── FAQ ────────────────────────────────────────────────────── -->
 <section id="faq" class="py-24 px-6 md:px-10 bg-surface-container">
   <div class="max-w-3xl mx-auto">
-    <h2 class="font-headline text-4xl font-bold text-primary mb-12 tracking-tight">Questions &amp; Answers</h2>
+    <h2 class="font-headline text-4xl font-bold text-primary mb-12 tracking-tight" data-i18n="faq_title">Questions &amp; Answers</h2>
     <div id="faq-list" class="space-y-3">
       <!-- Injected by faq.json -->
     </div>
@@ -190,7 +183,7 @@
 
 <!-- ── Timeline ───────────────────────────────────────────────── -->
 <section id="timeline" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
-  <h2 class="font-headline text-4xl font-bold text-primary mb-16 tracking-tight">Our Journey</h2>
+  <h2 class="font-headline text-4xl font-bold text-primary mb-16 tracking-tight" data-i18n="timeline_title">Our Journey</h2>
   <div id="timeline-list" class="relative">
     <!-- Injected by timeline.json -->
   </div>
@@ -201,7 +194,7 @@
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12">
     <div class="max-w-sm">
       <div class="font-headline text-xl font-bold text-primary mb-3">Aalto Foodsharing</div>
-      <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
+      <p class="text-on-surface-variant text-sm leading-relaxed mb-4" data-i18n="footer_tagline">
         A volunteer movement saving and sharing leftover food around the Aalto campus in Finland.
       </p>
       <a href="mailto:ext.richard-schmidt@aalto.fi" class="text-sm text-secondary hover:text-primary transition-colors font-bold">
@@ -210,20 +203,20 @@
     </div>
     <div class="grid grid-cols-2 gap-12">
       <div>
-        <h4 class="font-bold text-xs uppercase tracking-widest text-primary mb-5">Navigate</h4>
+        <h4 class="font-bold text-xs uppercase tracking-widest text-primary mb-5" data-i18n="footer_nav_title">Navigate</h4>
         <ul class="space-y-3 text-sm text-on-surface-variant">
-          <li><a href="#"          class="hover:text-primary transition-colors">Home</a></li>
-          <li><a href="#about"     class="hover:text-primary transition-colors">About Us</a></li>
-          <li><a href="#locations" class="hover:text-primary transition-colors">Locations</a></li>
-          <li><a href="#gallery"   class="hover:text-primary transition-colors">Gallery</a></li>
-          <li><a href="#faq"       class="hover:text-primary transition-colors">FAQ</a></li>
+          <li><a href="#"          class="hover:text-primary transition-colors" data-i18n="nav_home">Home</a></li>
+          <li><a href="#about"     class="hover:text-primary transition-colors" data-i18n="nav_about">About Us</a></li>
+          <li><a href="#locations" class="hover:text-primary transition-colors" data-i18n="nav_locations">Locations</a></li>
+          <li><a href="#timeline"  class="hover:text-primary transition-colors" data-i18n="nav_timeline">Timeline</a></li>
+          <li><a href="#faq"       class="hover:text-primary transition-colors" data-i18n="nav_faq">FAQ</a></li>
         </ul>
       </div>
       <div>
-        <h4 class="font-bold text-xs uppercase tracking-widest text-primary mb-5">Language</h4>
+        <h4 class="font-bold text-xs uppercase tracking-widest text-primary mb-5" data-i18n="footer_lang_title">Language</h4>
         <ul class="space-y-3 text-sm text-on-surface-variant">
-          <li><span class="font-bold text-primary">English</span></li>
-          <li><a href="https://www.foodsharing.ee/"         class="hover:text-primary transition-colors">Suomi</a></li>
+          <li><button onclick="setLang('en')" class="hover:text-primary transition-colors" data-i18n="lang_en">English</button></li>
+          <li><button onclick="setLang('fi')" class="hover:text-primary transition-colors" data-i18n="lang_fi">Suomi</button></li>
         </ul>
       </div>
     </div>
@@ -233,81 +226,173 @@
   </div>
 </footer>
 
-<!-- ── Content loader ─────────────────────────────────────────── -->
+<!-- ── Translations + Content Loader ─────────────────────────── -->
 <script>
-  // ── Locations ──────────────────────────────────────────────────
-  fetch('content/locations.json')
-    .then(r => r.json())
-    .then(locations => {
-      const grid = document.getElementById('locations-grid');
-      grid.innerHTML = locations.map(loc => `
-        <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg overflow-hidden hover:border-primary transition-colors">
-          <img
-            src="illustrations/${loc.image}"
-            onerror="this.src='${loc.image_fallback}'"
-            alt="${loc.name}"
-            class="w-full h-48 object-cover"
-          />
-          <div class="p-6">
-            <h3 class="font-headline text-xl font-bold mb-2">${loc.name}</h3>
-            <p class="text-sm text-on-surface-variant mb-5 leading-relaxed">${loc.description}</p>
-            <div class="flex flex-col gap-1">
-              <a href="${loc.google_maps}" target="_blank" rel="noopener"
-                 class="text-sm font-bold text-primary flex items-center justify-between hover:bg-surface-container py-2 px-3 rounded transition-colors">
-                Google Maps
-                <span class="material-symbols-outlined text-sm">open_in_new</span>
-              </a>
-              <a href="${loc.open_street_map}" target="_blank" rel="noopener"
-                 class="text-sm font-bold text-secondary flex items-center justify-between hover:bg-surface-container py-2 px-3 rounded transition-colors">
-                OpenStreetMap
-                <span class="material-symbols-outlined text-sm">map</span>
-              </a>
+  const translations = {
+    en: {
+      nav_home:           "Home",
+      nav_about:          "About",
+      nav_locations:      "Locations",
+      nav_timeline:       "Timeline",
+      nav_faq:            "FAQ",
+      hero_subtitle:      "Foodsharing encourages people to share leftover food that would otherwise go to the trash. We save & share food!",
+      hero_cta:           "Join the rescue!",
+      stat_points:        "Sharing Points",
+      stat_partners:      "Partners",
+      stat_volunteers:    "Volunteers",
+      stat_rescued:       "kg Rescued",
+      about_title:        "About Us",
+      about_p1:           "Foodsharing is a global movement aimed at reducing food waste together with businesses such as stores and restaurants to prevent edible food from being discarded.",
+      about_p2:           "Aalto Foodsharing (A!FS) is a grassroots initiative in Otaniemi dedicated to minimizing food waste, sharing food among students, and fostering a sustainability-focused community. We maintain a campus community fridge, conduct regular food pickups, and organize Foodsharing events.",
+      whatwedo_title:     "What we do",
+      whatwedo_1:         "Distribute leftover food at A!FS community fridges.",
+      whatwedo_2:         "Rescue edible food in collaboration with supermarkets and restaurants.",
+      whatwedo_3:         "Advocate for local food waste reduction.",
+      whatwedo_4:         "Organise events such as food preservation workshops and community dinners.",
+      whatwedo_5:         "Coordinate with other sustainability organisations.",
+      locations_title:    "Where to find us",
+      locations_subtitle: "Our sharing points are open to everyone. Please follow the hygiene rules posted at each location.",
+      faq_title:          "Questions & Answers",
+      timeline_title:     "Our Journey",
+      footer_tagline:     "A volunteer movement saving and sharing leftover food around the Aalto campus in Finland.",
+      footer_nav_title:   "Navigate",
+      footer_lang_title:  "Language",
+      lang_en:            "English",
+      lang_fi:            "Suomi",
+      maps_google:        "Google Maps",
+      maps_osm:           "OpenStreetMap",
+    },
+    fi: {
+      nav_home:           "Etusivu",
+      nav_about:          "Meistä",
+      nav_locations:      "Sijainnit",
+      nav_timeline:       "Historia",
+      nav_faq:            "UKK",
+      hero_subtitle:      "Ruoanjakaminen kannustaa ihmisiä jakamaan ylijäämäruokaa, joka muuten päätyisi roskiin. Me pelastamme ja jaamme ruokaa!",
+      hero_cta:           "Liity mukaan!",
+      stat_points:        "Jakopistettä",
+      stat_partners:      "Kumppania",
+      stat_volunteers:    "Vapaaehtoista",
+      stat_rescued:       "kg pelastettu",
+      about_title:        "Meistä",
+      about_p1:           "Ruoanjakaminen on maailmanlaajuinen liike, jonka tavoitteena on vähentää ruokahävikkiä yhteistyössä yritysten, kuten kauppojen ja ravintoloiden, kanssa — jotta syömäkelpoinen ruoka ei päätyisi roskiin.",
+      about_p2:           "Aalto Foodsharing (A!FS) on ruohonjuuritason aloite Otaniemessä, jonka tavoitteena on minimoida ruokahävikki, jakaa ruokaa opiskelijoiden kesken ja rakentaa kestävää yhteisöä. Ylläpidämme kampuksen yhteisöjääkaappia, teemme säännöllisiä ruokalanoutoja ja järjestämme tapahtumia.",
+      whatwedo_title:     "Mitä teemme",
+      whatwedo_1:         "Jaamme ylijäämäruokaa A!FS-yhteisöjääkaapeissa.",
+      whatwedo_2:         "Pelastamme syömäkelpoista ruokaa yhteistyössä supermarkettien ja ravintoloiden kanssa.",
+      whatwedo_3:         "Edistämme paikallista ruokahävikin vähentämistä.",
+      whatwedo_4:         "Järjestämme tapahtumia, kuten ruoansiilaustyöpajoja ja yhteisöllisiä ruokailuja.",
+      whatwedo_5:         "Teemme yhteistyötä muiden kestävän kehityksen järjestöjen kanssa.",
+      locations_title:    "Mistä löydät meidät",
+      locations_subtitle: "Jakopisteet ovat avoimia kaikille. Noudata kullakin pisteellä olevia hygieniaohjeita.",
+      faq_title:          "Usein kysytyt kysymykset",
+      timeline_title:     "Matkamme",
+      footer_tagline:     "Vapaaehtoisten liike, joka pelastaa ja jakaa ylijäämäruokaa Aalto-kampuksella Suomessa.",
+      footer_nav_title:   "Navigointi",
+      footer_lang_title:  "Kieli",
+      lang_en:            "English",
+      lang_fi:            "Suomi",
+      maps_google:        "Google Maps",
+      maps_osm:           "OpenStreetMap",
+    }
+  };
+
+  function applyTranslations(lang) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.getAttribute('data-i18n');
+      if (translations[lang][key] !== undefined) el.textContent = translations[lang][key];
+    });
+    // Active language indicator
+    ['en', 'fi'].forEach(l => {
+      const btn = document.getElementById('lang-' + l);
+      btn.classList.toggle('border-b', l === lang);
+      btn.classList.toggle('border-secondary', l === lang);
+      btn.classList.toggle('text-secondary', l === lang);
+      btn.classList.toggle('text-on-surface-variant', l !== lang);
+    });
+    document.documentElement.lang = lang;
+  }
+
+  function loadLocations(lang) {
+    const suffix = lang === 'fi' ? '_fi' : '';
+    fetch(`content/locations${suffix}.json`)
+      .then(r => r.json())
+      .then(locations => {
+        const t = translations[lang];
+        document.getElementById('locations-grid').innerHTML = locations.map(loc => `
+          <div class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg overflow-hidden hover:border-primary transition-colors">
+            <img src="${loc.image}" onerror="this.style.display='none'" alt="${loc.name}" class="w-full h-48 object-cover"/>
+            <div class="p-6">
+              <h3 class="font-headline text-xl font-bold mb-2">${loc.name}</h3>
+              <p class="text-sm text-on-surface-variant mb-5 leading-relaxed">${loc.description}</p>
+              <div class="flex flex-col gap-1">
+                <a href="${loc.google_maps}" target="_blank" rel="noopener"
+                   class="text-sm font-bold text-primary flex items-center justify-between hover:bg-surface-container py-2 px-3 rounded transition-colors">
+                  ${t.maps_google} <span class="material-symbols-outlined text-sm">open_in_new</span>
+                </a>
+                <a href="${loc.open_street_map}" target="_blank" rel="noopener"
+                   class="text-sm font-bold text-secondary flex items-center justify-between hover:bg-surface-container py-2 px-3 rounded transition-colors">
+                  ${t.maps_osm} <span class="material-symbols-outlined text-sm">map</span>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-      `).join('');
-    })
-    .catch(() => console.warn('locations.json not found'));
+        `).join('');
+      })
+      .catch(() => console.warn(`locations${suffix}.json not found`));
+  }
 
-  // ── FAQ ────────────────────────────────────────────────────────
-  fetch('content/faq.json')
-    .then(r => r.json())
-    .then(items => {
-      const list = document.getElementById('faq-list');
-      list.innerHTML = items.map(item => `
-        <details class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg group">
-          <summary class="flex justify-between items-center p-5 cursor-pointer font-bold select-none">
-            ${item.question}
-            <span class="material-symbols-outlined expand-icon text-tertiary shrink-0 ml-4">expand_more</span>
-          </summary>
-          <div class="px-5 pb-5 text-on-surface-variant leading-relaxed text-sm">
-            ${item.answer}
+  function loadFaq(lang) {
+    const suffix = lang === 'fi' ? '_fi' : '';
+    fetch(`content/faq${suffix}.json`)
+      .then(r => r.json())
+      .then(items => {
+        document.getElementById('faq-list').innerHTML = items.map(item => `
+          <details class="bg-surface-container-lowest border border-outline-variant/20 rounded-lg group">
+            <summary class="flex justify-between items-center p-5 cursor-pointer font-bold select-none">
+              ${item.question}
+              <span class="material-symbols-outlined expand-icon text-tertiary shrink-0 ml-4">expand_more</span>
+            </summary>
+            <div class="px-5 pb-5 text-on-surface-variant leading-relaxed text-sm">${item.answer}</div>
+          </details>
+        `).join('');
+      })
+      .catch(() => console.warn(`faq${suffix}.json not found`));
+  }
+
+  function loadTimeline(lang) {
+    const suffix = lang === 'fi' ? '_fi' : '';
+    fetch(`content/timeline${suffix}.json`)
+      .then(r => r.json())
+      .then(events => {
+        const reversed = [...events].reverse();
+        document.getElementById('timeline-list').innerHTML = `
+          <div class="border-l-2 border-primary/20 ml-4 md:ml-6 space-y-12">
+            ${reversed.map(ev => `
+              <div class="relative pl-8 md:pl-12">
+                <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
+                <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
+                <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
+                <p class="text-on-surface-variant leading-relaxed max-w-xl">${ev.description}</p>
+              </div>
+            `).join('')}
           </div>
-        </details>
-      `).join('');
-    })
-    .catch(() => console.warn('faq.json not found'));
+        `;
+      })
+      .catch(() => console.warn(`timeline${suffix}.json not found`));
+  }
 
-  // ── Timeline ───────────────────────────────────────────────────
-  fetch('content/timeline.json')
-    .then(r => r.json())
-    .then(events => {
-      const container = document.getElementById('timeline-list');
-      const reversedEvents = events.toReversed();
-      container.innerHTML = `
-        <div class="border-l-2 border-primary/20 ml-4 md:ml-6 space-y-12">
-          ${reversedEvents.map(ev => `
-            <div class="relative pl-8 md:pl-12">
-              <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
-              <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
-              <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
-              <p class="text-on-surface-variant leading-relaxed max-w-xl">${ev.description}</p>
-            </div>
-          `).join('')}
-        </div>
-      `;
-    })
-    .catch(() => console.warn('timeline.json not found'));
+  function setLang(lang) {
+    applyTranslations(lang);
+    loadLocations(lang);
+    loadFaq(lang);
+    loadTimeline(lang);
+    localStorage.setItem('afs_lang', lang);
+  }
+
+  // Init on page load
+  const savedLang = localStorage.getItem('afs_lang') || 'en';
+  setLang(savedLang);
 </script>
 </body>
 </html>
