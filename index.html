@@ -201,7 +201,7 @@
     <div class="max-w-sm">
       <div class="font-headline text-xl font-bold text-primary mb-3">Aalto Foodsharing</div>
       <p class="text-on-surface-variant text-sm leading-relaxed mb-4">
-        A volunteer movement saving and sharing leftover food around the Aalto campus in Finaldn.
+        A volunteer movement saving and sharing leftover food around the Aalto campus in Finland.
       </p>
       <a href="mailto:ext.richard-schmidt@aalto.fi" class="text-sm text-secondary hover:text-primary transition-colors font-bold">
         ext.richard-schmidt@aalto.fi
@@ -292,9 +292,10 @@
     .then(r => r.json())
     .then(events => {
       const container = document.getElementById('timeline-list');
+      const reversedEvents = events.toReversed();
       container.innerHTML = `
         <div class="border-l-2 border-primary/20 ml-4 md:ml-6 space-y-12">
-          ${events.map(ev => `
+          ${reversedEvents.map(ev => `
             <div class="relative pl-8 md:pl-12">
               <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
               <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
