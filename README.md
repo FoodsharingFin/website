@@ -1,4 +1,4 @@
-/
+```
 ├── index.html
 ├── illustrations/
 ├── images/
@@ -7,24 +7,20 @@
     ├── locations.json
     ├── faq.json
     └── timeline.json
+```
 
-Open tasks: 
-- adjust about us (add download buttom for market infromation + link to where we have been mentioned (maybe as scalable sections??)
-  - language switching feature + validation
-- adjust icons size 
-- create join the rescue subpage
-- add more to Faq section
-- adjust journey/ timeline 
+
+#### Open tasks: 
+```
+ 
+- create join the rescue subpage (including, Karrot, Telegram, flyer for cooperation, mail)
+- add more subsections to Faq section
+- day/ night mode
+- how to integrate more of the beautiful illustrations?
 
 Quetions Ronja: 
-- translationss, fonttype
-- 
+- translation quality
 
-about the timeline: 
-
-events: 
-- particpations (Hack a debate, cook out)
-- memerbships (
-- awards
-- new cooperation 
-- founding 
+timeline:
+- introduce better structure, get feedback, improve text
+```
