@@ -50,7 +50,6 @@
 </head>
 <body class="bg-surface text-on-surface">
 
-<!-- ── Navigation ─────────────────────────────────────────────── -->
 <nav class="fixed top-0 w-full z-50 bg-[#fdf9ec]/90 backdrop-blur-md border-b border-[#c3c9b5]/30">
   <div class="flex justify-between items-center px-6 md:px-10 py-4 max-w-6xl mx-auto">
     <a href="#" class="flex items-center gap-3">
@@ -72,7 +71,6 @@
   </div>
 </nav>
 
-<!-- ── Hero ───────────────────────────────────────────────────── -->
 <section class="pt-28 pb-20 px-6 md:px-10 max-w-6xl mx-auto">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
     <div>
@@ -98,7 +96,6 @@
   </div>
 </section>
 
-<!-- ── Stats ──────────────────────────────────────────────────── -->
 <section class="bg-surface-container-low py-16 px-6 md:px-10">
   <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-6">
     <div class="flex flex-col items-center text-center p-6 bg-surface-container-lowest border border-outline-variant/20 rounded-lg">
@@ -124,7 +121,6 @@
   </div>
 </section>
 
-<!-- ── About ──────────────────────────────────────────────────── -->
 <section id="about" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
     <div>
@@ -162,33 +158,26 @@
   </div>
 </section>
 
-<!-- ── Locations ─────────────────────────────────────────────── -->
 <section id="locations" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
   <h2 class="font-headline text-4xl font-bold text-primary mb-4 tracking-tight" data-i18n="locations_title">Where to find us</h2>
   <div id="locations-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <!-- Injected by locations.json -->
-  </div>
+    </div>
 </section>
 
-<!-- ── FAQ ────────────────────────────────────────────────────── -->
 <section id="faq" class="py-24 px-6 md:px-10 bg-surface-container">
   <div class="max-w-3xl mx-auto">
     <h2 class="font-headline text-4xl font-bold text-primary mb-12 tracking-tight" data-i18n="faq_title">Questions &amp; Answers</h2>
     <div id="faq-list" class="space-y-3">
-      <!-- Injected by faq.json -->
-    </div>
+      </div>
   </div>
 </section>
 
-<!-- ── Timeline ───────────────────────────────────────────────── -->
 <section id="timeline" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
-  <h2 class="font-headline text-4xl font-bold text-primary mb-16 tracking-tight" data-i18n="timeline_title">Our Journey</h2>
-  <div id="timeline-list" class="relative">
-    <!-- Injected by timeline.json -->
-  </div>
+  <h2 class="font-headline text-4xl font-bold text-primary mb-16 text-center tracking-tight" data-i18n="timeline_title">Our Journey</h2>
+  <div id="timeline-list">
+    </div>
 </section>
 
-<!-- ── Footer ─────────────────────────────────────────────────── -->
 <footer class="bg-surface-container border-t border-outline-variant/20 pt-16 pb-10 px-6 md:px-10">
   <div class="max-w-6xl mx-auto flex flex-col md:flex-row justify-between gap-12">
     <div class="max-w-sm">
@@ -225,7 +214,6 @@
   </div>
 </footer>
 
-<!-- ── Translations + Content Loader ─────────────────────────── -->
 <script>
   const translations = {
     en: {
@@ -366,15 +354,58 @@
       .then(events => {
         const reversed = [...events].reverse();
         document.getElementById('timeline-list').innerHTML = `
-          <div class="border-l-2 border-primary/20 ml-4 md:ml-6 space-y-12">
-            ${reversed.map(ev => `
-              <div class="relative pl-8 md:pl-12">
-                <div class="absolute -left-[9px] top-1 w-4 h-4 rounded-full bg-primary border-4 border-surface"></div>
-                <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
-                <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
-                <p class="text-on-surface-variant leading-relaxed max-w-xl">${ev.description}</p>
-              </div>
-            `).join('')}
+          <div class="flex justify-between mb-16 relative z-10 w-full">
+            <div class="w-[45%] text-right pr-4 md:pr-8">
+              <h3 class="font-headline text-2xl md:text-3xl font-bold text-primary">Aalto Foodsharing Operations</h3>
+            </div>
+            <div class="w-[45%] text-left pl-4 md:pl-8">
+              <h3 class="font-headline text-2xl md:text-3xl font-bold text-primary">Aalto Foodsharing Network</h3>
+            </div>
+          </div>
+
+          <div class="relative w-full pb-10">
+            <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 transform -translate-x-1/2"></div>
+            
+            <div class="space-y-24">
+              ${reversed.map(ev => {
+                const isOp = ev.type === 'operations';
+
+                // Reusable logic for images and text layout depending on the side
+                const leftSideContent = isOp 
+                  ? `<div class="text-right">
+                       <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
+                       <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
+                       <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
+                     </div>`
+                  : `<div class="flex justify-end">
+                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md max-h-56 object-cover w-full max-w-sm"/>` : ''}
+                     </div>`;
+
+                const rightSideContent = !isOp
+                  ? `<div class="text-left">
+                       <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
+                       <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
+                       <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
+                     </div>`
+                  : `<div class="flex justify-start">
+                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md max-h-56 object-cover w-full max-w-sm"/>` : ''}
+                     </div>`;
+
+                return `
+                  <div class="relative flex justify-between items-center w-full group">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface z-10 box-content transition-transform duration-300 group-hover:scale-125"></div>
+                    
+                    <div class="w-[45%] pr-4 md:pr-8">
+                      ${leftSideContent}
+                    </div>
+                    
+                    <div class="w-[45%] pl-4 md:pl-8">
+                      ${rightSideContent}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
           </div>
         `;
       })
