@@ -347,74 +347,69 @@
       .catch(() => console.warn(`faq${suffix}.json not found`));
   }
 
-  function loadTimeline(lang) {
-  const suffix = lang === 'fi' ? '_fi' : '';
-  fetch(`content/timeline${suffix}.json`)
-    .then(r => r.json())
-    .then(events => {
-      // Removed .reverse() as per your previous request
-      document.getElementById('timeline-list').innerHTML = `
-        <div class="flex justify-between mb-16 relative z-10 w-full">
-          <div class="w-1/2 text-right pr-12">
-            <h3 class="font-headline text-2xl md:text-3xl font-bold text-primary">Aalto Foodsharing Operations</h3>
+ function loadTimeline(lang) {
+    const suffix = lang === 'fi' ? '_fi' : '';
+    fetch(`content/timeline${suffix}.json`)
+      .then(r => r.json())
+      .then(events => {
+        document.getElementById('timeline-list').innerHTML = `
+          <div class="flex justify-between mb-16 relative z-10 w-full">
+            <div class="w-[45%] text-right pr-4 md:pr-8">
+              <h3 class="font-headline text-2xl md:text-3xl font-bold text-primary">Aalto Foodsharing Operations</h3>
+            </div>
+            <div class="w-[45%] text-left pl-4 md:pl-8">
+              <h3 class="font-headline text-2xl md:text-3xl font-bold text-secondary">Aalto Foodsharing Network</h3>
+            </div>
           </div>
-          <div class="w-1/2 text-left pl-12">
-            <h3 class="font-headline text-2xl md:text-3xl font-bold text-secondary">Aalto Foodsharing Network</h3>
+
+          <div class="relative w-full pb-10">
+            <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 transform -translate-x-1/2"></div>
+            
+            <div class="space-y-24">
+              ${events.map(ev => {
+                const isOp = ev.type === 'operations';
+
+                // Reusable logic for images and text layout depending on the side
+                const leftSideContent = isOp 
+                  ? `<div class="text-right">
+                       <div class="font-headline text-2xl font-bold text-primary mb-1">${ev.year}</div>
+                       <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
+                       <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
+                     </div>`
+                  : `<div class="flex justify-end">
+                      ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md object-contain w-full max-w-sm"/>` : ''}
+                     </div>`;
+
+                const rightSideContent = !isOp
+                  ? `<div class="text-left">
+                       <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
+                       <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
+                       <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
+                     </div>`
+                  : `<div class="flex justify-start">
+                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md object-contain w-full max-w-sm"/>` : ''}
+                     </div>`;
+
+                return `
+                  <div class="relative flex justify-between items-center w-full group">
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface z-10 box-content transition-transform duration-300 group-hover:scale-125"></div>
+                    
+                    <div class="w-[45%] pr-4 md:pr-8">
+                      ${leftSideContent}
+                    </div>
+                    
+                    <div class="w-[45%] pl-4 md:pl-8">
+                      ${rightSideContent}
+                    </div>
+                  </div>
+                `;
+              }).join('')}
+            </div>
           </div>
-        </div>
-
-        <div class="relative w-full">
-          <div class="absolute left-1/2 top-0 bottom-0 w-[2px] bg-primary/20 transform -translate-x-1/2"></div>
-          
-          <div class="grid grid-cols-2 gap-x-0">
-            ${events.map((ev, index) => {
-              const isOp = ev.type === 'operations';
-              
-              // We use negative margin-top on every entry except the first one 
-              // to pull the content upward into the empty space of the previous row.
-              const spacingClass = index === 0 ? "pt-0" : "-mt-24 md:-mt-32";
-
-              const leftDot = `<div class="absolute -right-[9px] top-8 w-4 h-4 rounded-full bg-secondary border-4 border-surface z-20"></div>`;
-              const rightDot = `<div class="absolute -left-[9px] top-8 w-4 h-4 rounded-full bg-primary border-4 border-surface z-20"></div>`;
-
-              return `
-                <div class="col-start-1 relative pr-10 md:pr-14 mb-12 ${spacingClass}">
-                  ${isOp ? `
-                    <div class="text-right relative">
-                      ${leftDot}
-                      <div class="font-headline text-2xl font-bold text-primary mb-1">${ev.year}</div>
-                      <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
-                      <p class="text-on-surface-variant text-sm leading-relaxed">${ev.description}</p>
-                    </div>
-                  ` : `
-                    <div class="flex justify-end">
-                      ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-2xl shadow-lg object-contain w-full max-w-sm"/>` : ''}
-                    </div>
-                  `}
-                </div>
-
-                <div class="col-start-2 relative pl-10 md:pl-14 mb-12 ${spacingClass}">
-                  ${!isOp ? `
-                    <div class="text-left relative">
-                      ${rightDot}
-                      <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
-                      <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
-                      <p class="text-on-surface-variant text-sm leading-relaxed">${ev.description}</p>
-                    </div>
-                  ` : `
-                    <div class="flex justify-start">
-                      ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-2xl shadow-lg object-contain w-full max-w-sm"/>` : ''}
-                    </div>
-                  `}
-                </div>
-              `;
-            }).join('')}
-          </div>
-        </div>
-      `;
-    })
-    .catch(() => console.warn(`timeline${suffix}.json not found`));
-}
+        `;
+      })
+      .catch(() => console.warn(`timeline${suffix}.json not found`));
+  }
 
   function setLang(lang) {
     applyTranslations(lang);
