@@ -377,7 +377,7 @@
                        <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
                      </div>`
                   : `<div class="flex justify-end">
-                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md max-h-56 object-cover w-full max-w-sm"/>` : ''}
+                      ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md object-contain w-full max-w-sm"/>` : ''}
                      </div>`;
 
                 const rightSideContent = !isOp
@@ -387,7 +387,7 @@
                        <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
                      </div>`
                   : `<div class="flex justify-start">
-                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md max-h-56 object-cover w-full max-w-sm"/>` : ''}
+                       ${ev.picture_path ? `<img src="pictures/${ev.picture_path}" alt="${ev.title}" class="rounded-xl shadow-md object-contain w-full max-w-sm"/>` : ''}
                      </div>`;
 
                 return `
