@@ -392,7 +392,7 @@
 
                 return `
                   <div class="relative flex justify-between items-center w-full group">
-                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface z-10 box-content transition-transform duration-300 group-hover:scale-125"></div>
+                    <div class="absolute left-1/2 transform -translate-x-1/2 w-4 h-4 rounded-full ${isOp ? 'bg-primary' : 'bg-secondary'} border-4 border-surface z-10 box-content transition-transform duration-300 group-hover:scale-125"></div>
                     
                     <div class="w-[45%] pr-4 md:pr-8">
                       ${leftSideContent}
