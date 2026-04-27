@@ -368,10 +368,13 @@
             <div class="space-y-24">
               ${events.map(ev => {
                 const isOp = ev.type === 'operations';
-
+                const leftDot = `<div class="absolute -right-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-surface z-10 box-content"></div>`;
+                const rightDot = `<div class="absolute -left-2 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-secondary border-4 border-surface z-10 box-content"></div>`;
+                
                 // Reusable logic for images and text layout depending on the side
                 const leftSideContent = isOp 
-                  ? `<div class="text-right">
+                  ? `<div class="text-right relative pr-6">
+                       ${leftDot}
                        <div class="font-headline text-2xl font-bold text-primary mb-1">${ev.year}</div>
                        <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
                        <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
@@ -381,7 +384,8 @@
                      </div>`;
 
                 const rightSideContent = !isOp
-                  ? `<div class="text-left">
+                  ? `<div class="text-left relative pl-6">
+                       ${rightDot}
                        <div class="font-headline text-2xl font-bold text-secondary mb-1">${ev.year}</div>
                        <h3 class="font-bold text-lg text-on-surface mb-2">${ev.title}</h3>
                        <p class="text-on-surface-variant leading-relaxed inline-block">${ev.description}</p>
