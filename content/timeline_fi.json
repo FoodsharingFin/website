@@ -131,5 +131,12 @@
         "description": "Uusi yhteisöjääkaappi avataan yhteistyössä Dodon kanssa. Pasilassa otetaan yhteyttä kumppaneihin, ja avoin strategiakokous suunnitellaan Foodsharing Helsingin ja Aalto Foodsharingin yhdistämiseksi kaupunginlaajuiseksi verkostoksi.",
         "picture_path": "",
         "type": "network"
+    },
+    {
+        "year": "toukokuu 2026",
+        "title": "Ruokanjakelualueita lisää kampuksen jääkaappeihin",
+        "description": "Kampuksen useissa jääkaapeissa on nyt erityisiä ruokanjakelualueita, joihin kuka tahansa voi tuoda ylijäänyttä ruokaa. Näihin kuuluu myös Aalto Design Factory.",
+        "picture_path": "FSatDF.jpg",
+        "type": "operations"
     }
 ]
