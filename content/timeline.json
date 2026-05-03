@@ -131,5 +131,12 @@
         "description": "A new community fridge opens in collaboration with Dodo. Partners in Pasila are contacted, and an open strategy meetup is planned to integrate Foodsharing Helsinki and Aalto Foodsharing into a city-wide network.",
         "picture_path": "",
         "type": "network"
+    },
+    {
+        "year": "May 2026",
+        "title": "Foodsharing compartments in more campus fridges",
+        "description": "There are now dedicated food-sharing sections in multiple fridges around the campus, where anyone can share leftover food. These include the Aalto Design Factory.",
+        "picture_path": "FSatDF.jpg",
+        "type": "operations"
     }
 ]
