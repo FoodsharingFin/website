@@ -1,0 +1,61 @@
+[
+    {
+        "name": "Vare Community Room and Fridge",
+        "coordinates": [60.185139, 24.825308],
+        "url": "",
+        "description": "",
+        "type": "Community Fridge", 
+        "icon_path": "illustrations/SmallFridge.png"
+    },
+    {
+        "name": "JMT Fridge (Otaniemi)",
+        "coordinates": [60.187036, 24.834891],
+        "url": "",
+        "description": "",
+        "type": "Community Fridge", 
+        "icon_path": "illustrations/SmallFridge.png"
+    },
+    {
+        "name": "Dodo Fridge (Pasila)",
+        "coordinates": [60.195362, 24.932767],
+        "url": "",
+        "description": "",
+        "type": "Community Fridge", 
+        "icon_path": "illustrations/SmallFridge.png"
+    },
+    {
+        "name": "K-Market Maarinsolmu",
+        "coordinates": [60.187083, 24.811820],
+        "url": "",
+        "description": "",
+        "type": "Collaboration Partner", 
+        "icon_path": "illustrations/Foodsharer.png"
+    }, 
+    {
+        "name": "Eat Poke Otaniemi",
+        "coordinates": [60.184612, 24.825649],
+        "url": "",
+        "description": "",
+        "type": "Collaboration Partner", 
+        "icon_path": "illustrations/Foodsharer.png"
+    }, 
+    {
+        "name": "Ravintola Arvo",
+        "coordinates": [60.186118, 24.822873],
+        "url": "",
+        "description": "",
+        "type": "Collaboration Partner", 
+        "icon_path": "illustrations/Foodsharer.png"
+    }, 
+    {
+        "name": "Dodo ry",
+        "coordinates": [60.195362, 24.932767],
+        "url": "https://dodo.org/en/",
+        "description": "Dodo is a Finnish environmental NGO. Dodo addresses environmental issues in community, we embrace complexity and figuring things out together. From the dining table, in the metro tunnel or on an adventure holiday, there is always a way to participate in addressing global environmental issues.",
+        "type": "Foodsharing Friends", 
+        "icon_path": "illustrations/PeoplePower.png"
+    }
+    
+
+
+]

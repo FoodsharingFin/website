@@ -7,6 +7,7 @@
   <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap" rel="stylesheet"/>
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
   <script id="tailwind-config">
     tailwind.config = {
       theme: {
@@ -46,7 +47,20 @@
     details > summary::-webkit-details-marker { display: none; }
     details[open] .expand-icon { transform: rotate(180deg); }
     .expand-icon { transition: transform 0.2s ease; }
+
+    /* Map styles */
+    #map { height: 480px; min-height: 300px; border-radius: 8px; overflow: hidden; }
+    .map-legend { position: absolute; top: 12px; right: 12px; background: rgba(255,255,255,0.95); padding: 0.5rem; border-radius: 8px; box-shadow: 0 6px 14px rgba(0,0,0,0.08); z-index: 500; max-width:220px; }
+    .map-legend .legend-item { display:flex; align-items:center; gap:0.5rem; margin-bottom:0.25rem; font-size:0.9rem; }
+    .map-legend img { width:28px; height:28px; object-fit:contain; }
+    .map-legend input { transform: translateY(1px); }
+
+    /* Marker visuals: larger uniform size */
+    .leaflet-marker-icon.afs-img-icon { width:56px !important; height:56px !important; object-fit:contain; border-radius:6px; }
+    .afs-default-marker { width:56px; height:56px; border-radius:50%; background:#406900; border:3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,0.25); display:block; }
+    .afs-div-icon { display:flex; align-items:center; justify-content:center; }
   </style>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
 </head>
 <body class="bg-surface text-on-surface">
 
@@ -61,6 +75,7 @@
       <a href="#about"     class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_about">About</a>
       <a href="#locations" class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_locations">Locations</a>
       <a href="#faq"       class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_faq">FAQ</a>
+      <a href="#network"   class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_network">A!FS Network</a>
       <a href="#timeline"  class="text-on-surface-variant hover:text-primary transition-colors" data-i18n="nav_timeline">Timeline</a>
     </div>
     <div class="flex items-center gap-2 text-xs font-bold text-secondary uppercase tracking-widest">
@@ -199,6 +214,19 @@
   </div>
 </section>
 
+<!-- Network map placed under FAQ -->
+<section id="network" class="py-12 px-6 md:px-10 max-w-6xl mx-auto">
+  <div class="max-w-6xl mx-auto">
+    <h2 class="font-headline text-3xl font-bold text-primary mb-4 tracking-tight">A!FS Network</h2>
+    <p class="text-on-surface-variant mb-4">Our network of community fridges, partner locations and friends. Click markers to see details.</p>
+
+    <div class="relative">
+      <div id="map" class="rounded-lg shadow-sm"></div>
+      <div id="network-legend" class="map-legend hidden" aria-hidden="false"></div>
+    </div>
+  </div>
+</section>
+
 <section id="timeline" class="py-24 px-6 md:px-10 max-w-6xl mx-auto">
   <h2 class="font-headline text-4xl font-bold text-primary mb-16 text-center tracking-tight" data-i18n="timeline_title">Our Journey</h2>
   <div id="timeline-list">
@@ -244,6 +272,7 @@
 <script>
   const translations = {
     en: {
+      nav_network:        "A!FS Network",
       nav_home:           "Home",
       nav_about:          "About",
       nav_locations:      "Locations",
@@ -277,6 +306,7 @@
       maps_osm:           "OpenStreetMap",
     },
     fi: {
+      nav_network:        "A!FS-verkosto",
       nav_home:           "Etusivu",
       nav_about:          "Meistä",
       nav_locations:      "Sijainnit",
@@ -438,11 +468,184 @@
       .catch(() => console.warn(`timeline${suffix}.json not found`));
   }
 
+  function loadNetwork() {
+    const mapEl = document.getElementById('map');
+    if (!mapEl) return;
+
+    // 1. Initialize map and global layers
+    if (!window._afs_map) {
+      window._afs_map = L.map('map', { scrollWheelZoom: false, zoomControl: true }).setView([60.185139, 24.825308], 13);
+      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
+        maxZoom: 20,
+        attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+      }).addTo(window._afs_map);
+      window._afs_layers_by_type = {};
+      window._afs_spiderLines = L.layerGroup().addTo(window._afs_map);
+      window._afs_markers_data = [];
+    } else {
+      // Clear existing data for re-renders (like language switches)
+      if (window._afs_layers_by_type) {
+        Object.values(window._afs_layers_by_type).forEach(g => {
+          try { g.clearLayers(); window._afs_map.removeLayer(g); } catch(e) {}
+        });
+      }
+      window._afs_layers_by_type = {};
+      window._afs_spiderLines.clearLayers();
+      window._afs_markers_data = [];
+      if (window._afs_arrangeMarkers) {
+        window._afs_map.off('zoomend', window._afs_arrangeMarkers);
+      }
+    }
+
+    fetch('content/network.json')
+      .then(r => r.json())
+      .then(items => {
+        const types = {};
+        const bounds = [];
+
+        items.forEach(it => {
+          if (!it.coordinates || !Array.isArray(it.coordinates)) return;
+          
+          const origLatLng = L.latLng(it.coordinates[0], it.coordinates[1]);
+          bounds.push([origLatLng.lat, origLatLng.lng]);
+
+          // Create Marker
+          let marker;
+          if (it.icon_path) {
+            const icon = L.icon({ iconUrl: it.icon_path, iconSize: [56,56], iconAnchor: [28,56], popupAnchor: [0,-44], className: 'afs-img-icon' });
+            marker = L.marker(origLatLng, { icon });
+          } else {
+            const div = `<div class="afs-div-icon"><span class="afs-default-marker"></span></div>`;
+            const divIcon = L.divIcon({ html: div, className: '', iconSize: [56,56], iconAnchor: [28,56], popupAnchor: [0,-44] });
+            marker = L.marker(origLatLng, { icon: divIcon });
+          }
+
+          // Bind Popup
+          let popup = '<div class="max-w-xs"><div class="font-headline text-lg font-bold mb-1">' + (it.name||'') + '</div>';
+          if (it.description) popup += '<div class="text-sm text-on-surface-variant mb-2">' + it.description + '</div>';
+          if (it.url) popup += '<div><a href="' + it.url + '" target="_blank" rel="noopener" class="text-primary font-bold">' + it.url + '</a></div>';
+          popup += '</div>';
+          marker.bindPopup(popup);
+
+          // Group by type
+          const t = it.type || 'Other';
+          if (!types[t]) types[t] = it.icon_path || '';
+          if (!window._afs_layers_by_type[t]) {
+            window._afs_layers_by_type[t] = L.layerGroup().addTo(window._afs_map);
+          }
+          window._afs_layers_by_type[t].addLayer(marker);
+
+          // Store raw data for dynamic collision calculation
+          window._afs_markers_data.push({
+            marker: marker,
+            origLatLng: origLatLng,
+            type: t
+          });
+        });
+
+        // 2. Dynamic Collision Calculation Logic (Pixel-based)
+        window._afs_arrangeMarkers = function() {
+          window._afs_spiderLines.clearLayers();
+          const ICON_SIZE = 64; // Distance in pixels to trigger overlap
+          const clusters = [];
+
+          // Group visually overlapping markers
+          window._afs_markers_data.forEach(data => {
+            // Skip markers that are hidden via the legend
+            if (!window._afs_map.hasLayer(window._afs_layers_by_type[data.type])) return;
+
+            // Convert map coordinates to screen pixels
+            const pt = window._afs_map.latLngToLayerPoint(data.origLatLng);
+            
+            let foundCluster = clusters.find(c => pt.distanceTo(c.centerPt) < ICON_SIZE);
+            if (foundCluster) {
+              foundCluster.items.push(data);
+            } else {
+              clusters.push({ centerPt: pt, origLatLng: data.origLatLng, items: [data] });
+            }
+          });
+
+          // Apply visual offset and draw lines
+          clusters.forEach(cluster => {
+            if (cluster.items.length === 1) {
+              // No overlap, snap back to true position
+              cluster.items[0].marker.setLatLng(cluster.origLatLng);
+            } else {
+              // Overlap found, arrange in a circle
+              const count = cluster.items.length;
+              const radius = 45; // Pixel radius for the spread
+              
+              cluster.items.forEach((data, index) => {
+                const angle = (index / count) * (Math.PI * 2);
+                const offsetX = cluster.centerPt.x + Math.cos(angle) * radius;
+                const offsetY = cluster.centerPt.y + Math.sin(angle) * radius;
+                
+                // Convert screen pixels back to map coordinates
+                const newLatLng = window._afs_map.layerPointToLatLng(L.point(offsetX, offsetY));
+                data.marker.setLatLng(newLatLng);
+
+                // Draw connecting line
+                const line = L.polyline([cluster.origLatLng, newLatLng], {
+                  color: '#406900',
+                  weight: 2,
+                  dashArray: '4, 4',
+                  opacity: 0.5
+                });
+                window._afs_spiderLines.addLayer(line);
+              });
+            }
+          });
+        };
+
+        // Attach event to recalculate whenever map zooms
+        window._afs_map.on('zoomend', window._afs_arrangeMarkers);
+
+        // 3. Build Legend
+        const legendEl = document.getElementById('network-legend');
+        if (legendEl) {
+          legendEl.innerHTML = '<div class="font-bold mb-2 text-sm">Categories</div>' + Object.keys(types).map((t, i) => {
+            const icon = types[t];
+            const id = 'legend-' + i;
+            const imgHtml = icon ? `<img src="${icon}" onerror="this.style.display='none'" alt="">` : `<span class='inline-block w-5 h-5 rounded-full bg-primary'></span>`;
+            return `<label class="legend-item"><input type="checkbox" id="${id}" data-type="${t}" checked> ${imgHtml} <div>${t}</div></label>`;
+          }).join('');
+          legendEl.classList.remove('hidden');
+
+          legendEl.querySelectorAll('input[type=checkbox]').forEach(cb => {
+            cb.addEventListener('change', e => {
+              const type = e.target.getAttribute('data-type');
+              const layer = window._afs_layers_by_type && window._afs_layers_by_type[type];
+              if (!layer) return;
+              
+              if (e.target.checked) window._afs_map.addLayer(layer);
+              else window._afs_map.removeLayer(layer);
+              
+              // Recalculate layout when markers are toggled
+              window._afs_arrangeMarkers();
+            });
+          });
+        }
+
+        // 4. Initial layout render
+        if (bounds.length) {
+          try { window._afs_map.fitBounds(bounds, { padding: [40,40] }); }
+          catch(e) { window._afs_map.setView(bounds[0], 13); }
+        }
+        
+        // Trigger initial arrangement after map is settled
+        setTimeout(window._afs_arrangeMarkers, 100);
+      })
+      .catch(err => console.warn('network.json not found', err));
+  }
+  
   function setLang(lang) {
+    // Load translations and content sections
     applyTranslations(lang);
     loadLocations(lang);
     loadFaq(lang);
     loadTimeline(lang);
+    // Network map (language independent data but re-render to ensure markers present)
+    if (typeof loadNetwork === 'function') loadNetwork();
     localStorage.setItem('afs_lang', lang);
   }
 
