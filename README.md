@@ -18,7 +18,7 @@
 - how to integrate more of the beautiful illustrations?
 - check translation quality
 - improve text
-
+- fix page ratio
 Map:
 - make more comprehensive
 - fix overlay feature
