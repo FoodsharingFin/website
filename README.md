@@ -15,12 +15,12 @@
  
 - create join the rescue subpage (including, Karrot, Telegram, flyer for cooperation, mail)
 - add more subsections to Faq section
-- day/ night mode
 - how to integrate more of the beautiful illustrations?
+- check translation quality
+- improve text
 
-Quetions Ronja: 
-- translation quality
+Map:
+- make more comprehensive
+- fix overlay feature
 
-timeline:
-- introduce better structure, get feedback, improve text
 ```
