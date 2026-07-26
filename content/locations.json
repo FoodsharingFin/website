@@ -26,8 +26,11 @@
   {
     "name": { "en": "Dodo Fridge (Pasila)", "fi": "Dodo-jääkaappi (Pasila)" },
     "coordinates": [60.195362, 24.932767],
-    "url": "",
-    "description": { "en": "", "fi": "" },
+    "url": "https://dodo.org/en/",
+    "description": {
+      "en": "Dodo is a Finnish environmental NGO. Dodo addresses environmental issues in community, we embrace complexity and figuring things out together. From the dining table, in the metro tunnel or on an adventure holiday, there is always a way to participate in addressing global environmental issues.",
+      "fi": "Dodo on suomalainen ympäristöjärjestö. Dodo käsittelee ympäristöasioita yhteisössä; otamme vastaan monimutkaisuuden ja selvitämme asioita yhdessä. Ruokapöydässä, metrotunnelissa tai seikkailulomalla on aina tapa osallistua globaalien ympäristökysymysten ratkaisemiseen."
+    },
     "type": { "en": "Community Fridge", "fi": "Yhteisöjääkaappi" },
     "icon_path": "illustrations/SmallFridge.png",
     "show_where_to_find_us": true,
