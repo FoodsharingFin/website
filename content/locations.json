@@ -69,7 +69,7 @@
     },
     "type": { "en": "Foodsharing Friends", "fi": "Foodsharing-ystävät" },
     "icon_path": "illustrations/PeoplePower.png",
-    "show_where_to_find_us": false
+    "show_where_to_find_us": true
   }
 ]
 
