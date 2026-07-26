@@ -1,0 +1,23 @@
+{
+  "Collaboration": {
+    "description": {
+      "en": "Are you a supermarket, restaurant, or organisation interested in partnering with us to reduce food waste? Get in touch with our collaboration team.",
+      "fi": "Oletko supermarket, ravintola tai organisaatio, joka on kiinnostunut yhteistyöstä kanssamme ruokahävikin vähentämiseksi? Ota yhteyttä yhteistyötiimiimme."
+    },
+    "mail": "collaboration@foodsharing.fi"
+  },
+  "Operations": {
+    "description": {
+      "en": "Questions about pick-ups, community fridges, or day-to-day operations? Reach out to our operations team.",
+      "fi": "Kysyttävää noudoista, yhteisöjääkaapeista tai päivittäisestä toiminnasta? Ota yhteyttä operaatiotiimiimme."
+    },
+    "mail": "operations@foodsharing.fi"
+  },
+  "Website": {
+    "description": {
+      "en": "Spotted an issue with this website or have suggestions for how we could improve it? Let us know.",
+      "fi": "Huomasitko ongelman tällä verkkosivustolla, vai onko sinulla parannusehdotuksia? Kerro meille."
+    },
+    "mail": "richard.schmidt@aalto.fi"
+  }
+}

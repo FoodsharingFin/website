@@ -1,9 +1,75 @@
 [
   {
-    "name": "Aalto Väre Fridge",
-    "description": "Our main community fridge is located on the ground floor of the Aalto Väre building. Once you have entered through the main lobby, go down the stairs, take the sharp right-hand turn at the bottom and go all the way to the end of the hallway. Take one more turn to the right and you will be in front of the room!",
+    "name": { "en": "Aalto Väre Fridge", "fi": "Aalto Väre -jääkaappi" },
+    "coordinates": [60.185139, 24.825308],
+    "url": "",
+    "description": {
+      "en": "Our main community fridge is located on the ground floor of the Aalto Väre building. Once you have entered through the main lobby, go down the stairs, take the sharp right-hand turn at the bottom and go all the way to the end of the hallway. Take one more turn to the right and you will be in front of the room!",
+      "fi": "Pääyhteisöjääkaappimme sijaitsee Aalto Väre -rakennuksen pohjakerroksessa. Kun olet astunut sisään pääaulasta, mene portaat alas, käänny jyrkästi oikealle portaiden alapäässä ja jatka käytävää loppuun asti. Käänny vielä kerran oikealle, niin olet huoneen edessä!"
+    },
+    "type": { "en": "Community Fridge", "fi": "Yhteisöjääkaappi" },
+    "icon_path": "illustrations/SmallFridge.png",
+    "show_where_to_find_us": true,
     "image": "CommunityFridge.png",
     "google_maps": "https://maps.app.goo.gl/BTwG8b36kKgwrBHBA",
     "open_street_map": "https://www.openstreetmap.org/?#map=19/60.185189/24.825057"
+  },
+  {
+    "name": { "en": "JMT Fridge (Otaniemi)", "fi": "JMT-jääkaappi (Otaniemi)" },
+    "coordinates": [60.187036, 24.834891],
+    "url": "",
+    "description": { "en": "", "fi": "" },
+    "type": { "en": "Community Fridge", "fi": "Yhteisöjääkaappi" },
+    "icon_path": "illustrations/SmallFridge.png",
+    "show_where_to_find_us": false
+  },
+  {
+    "name": { "en": "Dodo Fridge (Pasila)", "fi": "Dodo-jääkaappi (Pasila)" },
+    "coordinates": [60.195362, 24.932767],
+    "url": "",
+    "description": { "en": "", "fi": "" },
+    "type": { "en": "Community Fridge", "fi": "Yhteisöjääkaappi" },
+    "icon_path": "illustrations/SmallFridge.png",
+    "show_where_to_find_us": false
+  },
+  {
+    "name": { "en": "K-Market Maarinsolmu", "fi": "K-Market Maarinsolmu" },
+    "coordinates": [60.187083, 24.811820],
+    "url": "",
+    "description": { "en": "", "fi": "" },
+    "type": { "en": "Collaboration Partner", "fi": "Yhteistyökumppani" },
+    "icon_path": "illustrations/Foodsharer.png",
+    "show_where_to_find_us": false
+  },
+  {
+    "name": { "en": "Eat Poke Otaniemi", "fi": "Eat Poke Otaniemi" },
+    "coordinates": [60.184612, 24.825649],
+    "url": "",
+    "description": { "en": "", "fi": "" },
+    "type": { "en": "Collaboration Partner", "fi": "Yhteistyökumppani" },
+    "icon_path": "illustrations/Foodsharer.png",
+    "show_where_to_find_us": false
+  },
+  {
+    "name": { "en": "Ravintola Arvo", "fi": "Ravintola Arvo" },
+    "coordinates": [60.186118, 24.822873],
+    "url": "",
+    "description": { "en": "", "fi": "" },
+    "type": { "en": "Collaboration Partner", "fi": "Yhteistyökumppani" },
+    "icon_path": "illustrations/Foodsharer.png",
+    "show_where_to_find_us": false
+  },
+  {
+    "name": { "en": "Dodo ry", "fi": "Dodo ry" },
+    "coordinates": [60.195362, 24.932767],
+    "url": "https://dodo.org/en/",
+    "description": {
+      "en": "Dodo is a Finnish environmental NGO. Dodo addresses environmental issues in community, we embrace complexity and figuring things out together. From the dining table, in the metro tunnel or on an adventure holiday, there is always a way to participate in addressing global environmental issues.",
+      "fi": "Dodo on suomalainen ympäristöjärjestö. Dodo käsittelee ympäristöasioita yhteisössä; otamme vastaan monimutkaisuuden ja selvitämme asioita yhdessä. Ruokapöydässä, metrotunnelissa tai seikkailulomalla on aina tapa osallistua globaalien ympäristökysymysten ratkaisemiseen."
+    },
+    "type": { "en": "Foodsharing Friends", "fi": "Foodsharing-ystävät" },
+    "icon_path": "illustrations/PeoplePower.png",
+    "show_where_to_find_us": false
   }
 ]
+

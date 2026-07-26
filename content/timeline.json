@@ -1,141 +1,201 @@
 [
     {
-        "year": "March 2024",
-        "title": "Aalto Foodsharing launches",
-        "description": "Aalto Foodsharing officially starts, beginning regular food pickups in collaboration with local partners including K-Market and BakedByEli.",
+        "year": { "en": "March 2024", "fi": "Maaliskuu 2024" },
+        "title": { "en": "Aalto Foodsharing launches", "fi": "Aalto Foodsharing käynnistyy" },
+        "description": {
+            "en": "Aalto Foodsharing officially starts, beginning regular food pickups in collaboration with local partners including K-Market and BakedByEli.",
+            "fi": "Aalto Foodsharing aloittaa virallisesti toimintansa ja käynnistää säännölliset ruoanoudot yhteistyössä paikallisten kumppaneiden, kuten K-Marketin ja BakedByElin, kanssa."
+        },
         "picture_path": "fidge.JPG",
         "type": "operations"
     },
     {
-        "year": "August 2024",
-        "title": "Sustainability Action Booster funds A!FS",
-        "description": "Aalto's Sustainability Action Booster supports our initiative with a grant, enabling the quick scale to larger sustainability actions.",
+        "year": { "en": "August 2024", "fi": "Elokuu 2024" },
+        "title": { "en": "Sustainability Action Booster funds A!FS", "fi": "Sustainability Action Booster rahoittaa A!FS:ää" },
+        "description": {
+            "en": "Aalto's Sustainability Action Booster supports our initiative with a grant, enabling the quick scale to larger sustainability actions.",
+            "fi": "Aallon Sustainability Action Booster tukee aloitettamme apurahalla, mahdollistaen nopean laajentumisen suurempiin kestävyystekoihin."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "September 2024",
-        "title": "Cargo bike acquired",
-        "description": "From now on, a cargo bike joins our food rescue operations, enabling larger food pickups and becoming a centerpiece at public events.",
+        "year": { "en": "September 2024", "fi": "Syyskuu 2024" },
+        "title": { "en": "Cargo bike acquired", "fi": "Lastipyörä hankitaan" },
+        "description": {
+            "en": "From now on, a cargo bike joins our food rescue operations, enabling larger food pickups and becoming a centerpiece at public events.",
+            "fi": "Lastipyörä liittyy ruoanpelastusoperaatioihimme, mahdollistaen suuremmat ruoanoudot ja toimien näkyvinä elementtinä julkisissa tapahtumissa."
+        },
         "picture_path": "cargo_bike_2.JPG",
         "type": "operations"
     },
     {
-        "year": "October 2024",
-        "title": "A!FS becomes Campus Sustainability Champion",
-        "description": "Our initiative is recognized for its sustainability contribution on the campus.",
+        "year": { "en": "October 2024", "fi": "Lokakuu 2024" },
+        "title": { "en": "A!FS becomes Campus Sustainability Champion", "fi": "A!FS nimetään Campus Sustainability Championsiksi" },
+        "description": {
+            "en": "Our initiative is recognized for its sustainability contribution on the campus.",
+            "fi": "Aloitteemme tunnustetaan sen kestävyyspanoksesta kampuksella."
+        },
         "picture_path": "sustainability_champion.JPG",
         "type": "network"
     },
     {
-        "year": "January 2025",
-        "title": "Aalto Restaurant Committee outreach",
-        "description": "Team members present Foodsharing to the Aalto Restaurant Committee, sparking interest and awareness of food rescue for campus student canteens.",
+        "year": { "en": "January 2025", "fi": "Tammikuu 2025" },
+        "title": { "en": "Aalto Restaurant Committee outreach", "fi": "Yhteydenotto Aallon ravintolakomiteaan" },
+        "description": {
+            "en": "Team members present Foodsharing to the Aalto Restaurant Committee, sparking interest and awareness of food rescue for campus student canteens.",
+            "fi": "Tiimin jäsenet esittelevät Foodsharingin Aallon ravintolakomitealle, herättäen kiinnostusta ja tietoisuutta ruoanpelastuksesta kampuksen opiskelijaravintoloissa."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "January 2025",
-        "title": "Oulu Food Waste Festival",
-        "description": "Three members represent A!FS at the Oulu Food Waste Festival organized by Dodo, gaining visibility among the Finnish foodsharing community and connecting with national actors.",
+        "year": { "en": "January 2025", "fi": "Tammikuu 2025" },
+        "title": { "en": "Oulu Food Waste Festival", "fi": "Oulun ruokahävikkifestivaali" },
+        "description": {
+            "en": "Three members represent A!FS at the Oulu Food Waste Festival organized by Dodo, gaining visibility among the Finnish foodsharing community and connecting with national actors.",
+            "fi": "Kolme jäsentä edustaa A!FS:ää Dodon järjestämällä Oulun ruokahävikkifestivaalilla, saaden näkyvyyttä suomalaisessa foodsharing-yhteisössä ja luoden yhteyksiä kansallisiin toimijoihin."
+        },
         "picture_path": "oulu_foodfestival.JPG",
         "type": "network"
     },
     {
-        "year": "March 2025",
-        "title": "Transition Town Network Finland",
-        "description": "A!FS presents our volunteer coordination model and its integration with Karrot as a best-practice example at the national Transition Town Network gathering.",
+        "year": { "en": "March 2025", "fi": "Maaliskuu 2025" },
+        "title": { "en": "Transition Town Network Finland", "fi": "Transition Town Network Finland" },
+        "description": {
+            "en": "A!FS presents our volunteer coordination model and its integration with Karrot as a best-practice example at the national Transition Town Network gathering.",
+            "fi": "A!FS esittelee vapaaehtoisten koordinointimallinsa ja sen yhteensovittamisen Karrot-sovelluksen kanssa parhaana käytäntönä kansallisessa Transition Town Network -kokoontumisessa."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "April 2025",
-        "title": "Food Conservation Workshop Series",
-        "description": "A series of hands-on workshops covers pickling, lacto-fermentation, fruit leather, and bread pasta — connecting new people with food sustainability practices.",
+        "year": { "en": "April 2025", "fi": "Huhtikuu 2025" },
+        "title": { "en": "Food Conservation Workshop Series", "fi": "Ruoan säilöntätyöpajasarja" },
+        "description": {
+            "en": "A series of hands-on workshops covers pickling, lacto-fermentation, fruit leather, and bread pasta — connecting new people with food sustainability practices.",
+            "fi": "Käytännönläheinen työpajasarja käsittelee suolaamista, maitohappokäymistä, hedelmänahkaa ja leipäpastaa — tuoden uusia ihmisiä yhteen ruokakestävyyden käytäntöjen äärellä."
+        },
         "picture_path": "fermentation_2.jpg",
         "type": "operations"
     },
     {
-        "year": "April 2025",
-        "title": "Food System Talk with Joel Tefke",
-        "description": "A public talk on circular food systems, the first large public event organized by A!FS.",
+        "year": { "en": "April 2025", "fi": "Huhtikuu 2025" },
+        "title": { "en": "Food System Talk with Joel Tefke", "fi": "Ruokajärjestelmäluento Joel Tefken kanssa" },
+        "description": {
+            "en": "A public talk on circular food systems, the first large public event organized by A!FS.",
+            "fi": "Julkinen luento kiertävistä ruokajärjestelmistä — A!FS:n ensimmäinen suurempi julkinen tapahtuma."
+        },
         "picture_path": "joel_food_system.jpg",
         "type": "network"
     },
     {
-        "year": "August 2025",
-        "title": "Orientation Week outreach",
-        "description": "A!FS runs stands at Ota-Orienteering and Aalto Fest, reaching new students with flyers, patches, and the cargo bike.",
+        "year": { "en": "August 2025", "fi": "Elokuu 2025" },
+        "title": { "en": "Orientation Week outreach", "fi": "Orientaatioviikon tavoittaminen" },
+        "description": {
+            "en": "A!FS runs stands at Ota-Orienteering and Aalto Fest, reaching new students with flyers, patches, and the cargo bike.",
+            "fi": "A!FS pitää pisteitä Ota-Orienteeringissa ja Aalto Festissä, tavoittaen uusia opiskelijoita flyereiden, kangasmerkkien ja lastipyörän avulla."
+        },
         "picture_path": "sab_bazaar.JPG",
         "type": "operations"
     },
     {
-        "year": "September 2025",
-        "title": "Tipping Point sustainability conference",
-        "description": "A!FS is represented at a critical sustainability roundtable in Helsinki, gaining further visibility in the city's sustainability network.",
+        "year": { "en": "September 2025", "fi": "Syyskuu 2025" },
+        "title": { "en": "Tipping Point sustainability conference", "fi": "Tipping Point -kestävyyskonferenssi" },
+        "description": {
+            "en": "A!FS is represented at a critical sustainability roundtable in Helsinki, gaining further visibility in the city's sustainability network.",
+            "fi": "A!FS on edustettuna tärkeässä kestävyyden pyöreän pöydän kokouksessa Helsingissä, saaden lisää näkyvyyttä kaupungin kestävyysverkostossa."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "December 2025",
-        "title": "Community Christmas celebration",
-        "description": "A Christmas cookout at the Design Factory brings partners and members together.",
+        "year": { "en": "December 2025", "fi": "Joulukuu 2025" },
+        "title": { "en": "Community Christmas celebration", "fi": "Yhteisön jouluruokailu" },
+        "description": {
+            "en": "A Christmas cookout at the Design Factory brings partners and members together.",
+            "fi": "Jouluruokailu Design Factorylla kokoaa yhteen kumppaneita ja jäseniä."
+        },
         "picture_path": "foodsharing_group_pic_christmas.JPG",
         "type": "operations"
     },
     {
-        "year": "January 2026",
-        "title": "Dodo Urban Dinners",
-        "description": "A!FS supplies dumpster-dived food for Dodo's Urban Dinner events. First steps towards seeding a potential Helsinki Hub?",
+        "year": { "en": "January 2026", "fi": "Tammikuu 2026" },
+        "title": { "en": "Dodo Urban Dinners", "fi": "Dodon kaupunkidinnereillä" },
+        "description": {
+            "en": "A!FS supplies dumpster-dived food for Dodo's Urban Dinner events. First steps towards seeding a potential Helsinki Hub?",
+            "fi": "A!FS toimittaa ruokaa Dodon Urban Dinner -tapahtumiin. Ensiaskeleita mahdollisen Helsinki Hubin perustamiseksi?"
+        },
         "picture_path": "dodo_2.jpg",
         "type": "network"
     },
     {
-        "year": "February 2026",
-        "title": "Foodsharing Spring Cookout event",
-        "description": "A public kick-off at the Design Factory recruits new food visionaries using a Cluedo-style game to explain roles and operations.",
+        "year": { "en": "February 2026", "fi": "Helmikuu 2026" },
+        "title": { "en": "Foodsharing Spring Cookout event", "fi": "Foodsharing Spring Cookout -tapahtuma" },
+        "description": {
+            "en": "A public kick-off at the Design Factory recruits new food visionaries using a Cluedo-style game to explain roles and operations.",
+            "fi": "Julkinen aloitustapahtuma Design Factorylla rekrytoi uusia ruokavisioäärejä Cluedo-tyylisen pelin avulla, joka selittää roolit ja toimintatavat."
+        },
         "picture_path": "buffet_2.jpg",
         "type": "operations"
     },
     {
-        "year": "February 2026",
-        "title": "Membership in Nordic Climate Justice Coalition",
-        "description": "A!FS becomes a member of the Nordic Climate Justice Coalition, a network for intersectional analyses of climate justice exposing Nordic countries’ climate injustice as a tactic to demanding just systemic transitions.",
+        "year": { "en": "February 2026", "fi": "Helmikuu 2026" },
+        "title": { "en": "Membership in Nordic Climate Justice Coalition", "fi": "Jäsenyys Pohjoismaisessa ilmastososiaalisen oikeudenmukaisuuden koalitiossa" },
+        "description": {
+            "en": "A!FS becomes a member of the Nordic Climate Justice Coalition, a network for intersectional analyses of climate justice exposing Nordic countries’ climate injustice as a tactic to demanding just systemic transitions.",
+            "fi": "A!FS liittyy Nordic Climate Justice Coalition -verkostoon, joka tarkastelee ilmasto-oikeudenmukaisuutta intersektionaalisesta näkökulmasta paljastaen Pohjoismaiden ilmastoepäoikeudenmukaisuuden keinona vaatia oikeudenmukaisia systeemisiä muutoksia."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "March 2026",
-        "title": "World Overshoot Day action — 376K reach",
-        "description": "A joint action with Elokapina and Onni Tonkija at Helsinki railway station goes viral: 376K views (6% of Finland's population), 13.5K likes, 340 new followers, and 16 people indicate interest in joining the organizing team.",
+        "year": { "en": "March 2026", "fi": "Maaliskuu 2026" },
+        "title": { "en": "World Overshoot Day action — 376K reach", "fi": "World Overshoot Day -toiminta — 376 000 tavoitettu" },
+        "description": {
+            "en": "A joint action with Elokapina and Onni Tonkija at Helsinki railway station goes viral: 376K views (6% of Finland's population), 13.5K likes, 340 new followers, and 16 people indicate interest in joining the organizing team.",
+            "fi": "Yhteinen toiminta Elokapinan ja Onni Tonkijan kanssa Helsingin rautatieasemalla menee viraaliksi: 376 000 katselukertaa (6 % Suomen väestöstä), 13 500 tykkäystä, 340 uutta seuraajaa ja 16 henkilöä ilmaisee kiinnostuksensa liittyä järjestystiimiin."
+        },
         "picture_path": "overshot_2.jpg",
         "type": "network"
     },
     {
-        "year": "March 2026",
-        "title": "Challenge provider in Sustainability Hack-and-Debate event",
-        "description": "Foodsharing provides a sustainability challenge, where students from Design and Engineering puzzel over the easter hackathon at Aalto University.",
+        "year": { "en": "March 2026", "fi": "Maaliskuu 2026" },
+        "title": { "en": "Challenge provider in Sustainability Hack-and-Debate event", "fi": "Haasteiden tarjoaja Sustainability Hack-and-Debate -tapahtumassa" },
+        "description": {
+            "en": "Foodsharing provides a sustainability challenge, where students from Design and Engineering puzzel over the easter hackathon at Aalto University.",
+            "fi": ""
+        },
         "picture_path": "hack_a_debatejpg.jpg",
         "type": "network"
     },
     {
-        "year": "April 2026",
-        "title": "Cookout with Aalto Sustainability Club and Plant-Based University",
-        "description": "In collaboration with two sustainability initiatives on campus, A!FS supports the first open cookout event of the year!",
+        "year": { "en": "April 2026", "fi": "Huhtikuu 2026" },
+        "title": { "en": "Cookout with Aalto Sustainability Club and Plant-Based University", "fi": "Ruokailu Aalto Sustainability Clubin ja Plant Based Universityn kanssa" },
+        "description": {
+            "en": "In collaboration with two sustainability initiatives on campus, A!FS supports the first open cookout event of the year!",
+            "fi": "Yhteistyössä kahden kampuksen kestävyysaloitteen kanssa A!FS tukee vuoden viidettä avointa ruokailutapahtumaa!"
+        },
         "picture_path": "ppl_cooking.JPG",
         "type": "network"
     },
     {
-        "year": "April 2026",
-        "title": "Foodsharing Helsinki takes shape",
-        "description": "A new community fridge opens in collaboration with Dodo. Partners in Pasila are contacted, and an open strategy meetup is planned to integrate Foodsharing Helsinki and Aalto Foodsharing into a city-wide network.",
+        "year": { "en": "April 2026", "fi": "Huhtikuu 2026" },
+        "title": { "en": "Foodsharing Helsinki takes shape", "fi": "Foodsharing Helsinki ottaa muotonsa" },
+        "description": {
+            "en": "A new community fridge opens in collaboration with Dodo. Partners in Pasila are contacted, and an open strategy meetup is planned to integrate Foodsharing Helsinki and Aalto Foodsharing into a city-wide network.",
+            "fi": "Uusi yhteisöjääkaappi avataan yhteistyössä Dodon kanssa. Pasilassa otetaan yhteyttä kumppaneihin, ja avoin strategiakokous suunnitellaan Foodsharing Helsingin ja Aalto Foodsharingin yhdistämiseksi kaupunginlaajuiseksi verkostoksi."
+        },
         "picture_path": "",
         "type": "network"
     },
     {
-        "year": "May 2026",
-        "title": "Foodsharing at more campus fridges",
-        "description": "There are now dedicated food-sharing sections in multiple fridges around the campus, where anyone can share leftover food. These include the Aalto Design Factory.",
+        "year": { "en": "May 2026", "fi": "Toukokuu 2026" },
+        "title": { "en": "Foodsharing at more campus fridges", "fi": "Ruokanjakelualueita lisää kampuksen jääkaappeihin" },
+        "description": {
+            "en": "There are now dedicated food-sharing sections in multiple fridges around the campus, where anyone can share leftover food. These include the Aalto Design Factory.",
+            "fi": "Kampuksen useissa jääkaapeissa on nyt erityisiä ruokanjakelualueita, joihin kuka tahansa voi tuoda ylijäänyttä ruokaa. Näihin kuuluu myös Aalto Design Factory."
+        },
         "picture_path": "FSatDF.jpg",
         "type": "operations"
     }

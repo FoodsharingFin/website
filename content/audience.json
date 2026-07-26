@@ -1,0 +1,88 @@
+{
+  "foodsaver": {
+    "title": {
+      "en": "For Foodsaver",
+      "fi": "Ruoanpelastajille"
+    },
+    "subtitle": {
+      "en": "Do you want to join regular food pick-ups or help Foodsharing grow in Finland?",
+      "fi": "Haluatko osallistua säännöllisiin ruoanoutoihin tai auttaa Foodsharingia kasvamaan Suomessa?"
+    },
+    "description": {
+      "en": "Foodsharing is organised through three levels of engagement.\n\nA *Foodsharer* is anyone who helps reduce food waste, for example by picking up shared food from our public fridges — join the Telegram group below to get notified whenever food is available.\n\nA *Foodsaver* visits our partnering restaurants and supermarkets at agreed times to save edible goods from being thrown away. Before you can join the rescue, you need to attend one introduction pick-up: select \u201cNext Introduction\u201d below to sign up for our next one. Once you have completed the introduction, you can sign up for individual pick-ups on our organising platform, [Karrot](https://karrot.world/#/groupPreview/597).\n\nThe third level is our *Foodvisionaries*, who shape our shared goals and how we reach them. If you would like to help organise events, connect us with new partners, or share ideas on how to improve our operations, please get in touch using the contact details below.",
+      "fi": "Foodsharing toimii kolmella osallistumistasolla.\n\n*Foodsharer* on kuka tahansa, joka auttaa vähentämään ruokahävikkiä esimerkiksi noutamalla jaettua ruokaa julkisista jääkaapeistamme — liity alla olevaan Telegram-ryhmään saadaksesi ilmoituksen, kun ruokaa on saatavilla.\n\n*Foodsaver* vierailee yhteistyöravintoloissa ja -kaupoissa sovittuina aikoina pelastaakseen syömäkelpoista ruokaa roskiin päätymiseltä. Ennen kuin voit liittyä pelastustoimintaan, sinun tulee osallistua yhteen perehdytysnoutoon: valitse alta \u201cSeuraava perehdytys\u201d ilmoittautuaksesi seuraavaan perehdytykseen. Perehdytyksen suoritettuasi voit ilmoittautua yksittäisiin noutoihin [Karrot](https://karrot.world/#/groupPreview/597)-alustallamme.\n\nKolmas taso ovat *Foodvisionäärimme*, jotka pohtivat yhteisiä tavoitteitamme ja niiden saavuttamista. Jos haluat auttaa tapahtumien järjestämisessä, auttaa meitä löytämään uusia kumppaneita tai sinulla on ideoita toimintamme kehittämiseksi, ota rohkeasti yhteyttä alla olevien yhteystietojen kautta."
+    },
+    "icon_path": "illustrations/Foodsharer.png",
+    "hyperlinks": {
+      "Next Introduction": {
+        "subtitle": {
+          "en": "Sign up for our next introduction pick-up.",
+          "fi": "Ilmoittaudu seuraavaan perehdytysnoutoon."
+        },
+        "url": "https://forms.office.com/Pages/ResponsePage.aspx?id=JHcarkFAYkSm3FOMsZlwflsYgz6srT9Es-8bnst6eoZURDhSQ1Q3NFgyTEo3OUw2TEI5TjVRN0MwRy4u"
+      },
+      "Telegram": {
+        "subtitle": {
+          "en": "Join us on Telegram to get notified about upcoming events, introductions, or when our community fridge has been filled.",
+          "fi": "Liity Telegram-ryhmäämme saadaksesi ilmoituksia tulevista tapahtumista, perehdytyksistä tai kun yhteisöjääkaappimme on täytetty."
+        },
+        "url": "https://t.me/+2NxhCayA8bg4ODlk"
+      },
+      "Karrot": {
+        "subtitle": {
+          "en": "Karrot is the platform where we coordinate our regular pick-ups with partners. Please complete the introduction first. Food providers should visit the Food Provider page instead.",
+          "fi": "Karrot on alusta, jolla koordinoimme säännöllisiä noutojamme kumppaneiden kanssa. Suorita perehdytys ensin. Ruoantarjoajien kannattaa sen sijaan käydä Ruoantarjoajille-sivulla."
+        },
+        "url": "https://karrot.world/#/groupPreview/597"
+      }
+    },
+    "files": {
+      "Welcome Guide": {
+        "title": {
+          "en": "New to Foodsharing? Intro Guide",
+          "fi": "Uusi Foodsharingissa? Aloitusopas"
+        },
+        "path": "documents/newbie-pack.pdf"
+      },
+      "Pick-up Guide": {
+        "title": {
+          "en": "How to do a food pick-up?",
+          "fi": "Miten ruoanouto tehdään?"
+        },
+        "path": "documents/instructions pick-up.pdf"
+      }
+    },
+    "contact": {
+      "Foodsharing Strategy": ["strategy@foodsharing.fi"]
+    }
+  },
+  "foodprovider": {
+    "title": {
+      "en": "For Food Provider",
+      "fi": "Ruoantarjoajille"
+    },
+    "subtitle": {
+      "en": "Are you a supermarket, restaurant, or event organiser who wants to reduce food waste?",
+      "fi": "Oletko supermarket, ravintola tai tapahtumajärjestäjä, joka haluaa vähentää ruokahävikkiä?"
+    },
+    "description": {
+      "en": "We partner with supermarkets, restaurants, cafés and event organisers to give surplus edible food a second chance instead of ending up in the bin. Our volunteers pick up your surplus food at agreed times, at no cost to you, and share it through community fridges and food pickups. Download our Collaboration Pack below to learn how a partnership works, what is involved, and how to get started. If you have any questions, our collaboration and operations teams are happy to help \u2014 see the contact details below.",
+      "fi": "Teemme yhteistyötä supermarkettien, ravintoloiden, kahviloiden ja tapahtumajärjestäjien kanssa antaaksemme ylijäämäruoalle toisen mahdollisuuden roskiin päätymisen sijaan. Vapaaehtoisemme noutavat ylijäämäruokanne sovittuina aikoina veloituksetta ja jakavat sen yhteisöjääkaappien ja ruoanoutojen kautta. Lataa alta yhteistyöpakettimme lukeaksesi, miten kumppanuus toimii, mitä se sisältää ja miten pääset alkuun. Jos sinulla on kysyttävää, yhteistyö- ja operaatiotiimimme auttavat mielellään \u2014 katso yhteystiedot alta."
+    },
+    "icon_path": "illustrations/GiftEconomy.png",
+    "hyperlinks": {},
+    "files": {
+      "Collaboration Pack": {
+        "title": {
+          "en": "Partnership & Collaboration Pack",
+          "fi": "Kumppanuus- ja yhteistyöpaketti"
+        },
+        "path": "documents/Collaboration-Pack.pdf"
+      }
+    },
+    "contact": {
+      "Foodsharing Collaboration": ["collaboration@foodsharing.fi"],
+      "Foodsharing Operations": ["operations@foodsharing.fi"]
+    }
+  }
+}

@@ -1,18 +1,52 @@
 [
   {
-    "question": "What is Aalto Foodsharing?",
-    "answer": "Aalto Foodsharing is a grassroots initiative, existing since March 2024 to save food waste in Otaniemi, Finland at the Aalto University. ​Our intentions are to minimize food waste, share food amongst students and build a community around sustainability action.​"
+    "question": {
+      "en": "What is Aalto Foodsharing?",
+      "fi": "Mikä on Aalto Foodsharing?"
+    },
+    "answer": {
+      "en": "Aalto Foodsharing is a grassroots initiative, existing since March 2024 to save food waste in Otaniemi, Finland at the Aalto University. ​Our intentions are to minimize food waste, share food amongst students and build a community around sustainability action.​",
+      "fi": "Aalto Foodsharing on ruohonjuuritason aloite, joka on toiminut maaliskuusta 2024 lähtien tarkoituksenaan vähentää ruokahävikkiä Otaniemessä, Suomessa, Aalto-yliopiston kampuksella. Tavoitteenamme on minimoida ruokahävikki, jakaa ruokaa opiskelijoiden kesken ja rakentaa yhteisöä kestävän kehityksen toiminnan ympärille."
+    }
   },
   {
-    "question": "Where does this idea come from?",
-    "answer": "We are not alone. A!SF is inspired by the global Foodsharing movement, which aims to reduce food waste. ​This is achieved by active local food savers and collaborations with stores and restaurants."
+    "question": {
+      "en": "Where does this idea come from?",
+      "fi": "Mistä tämä idea on peräisin?"
+    },
+    "answer": {
+      "en": "We are not alone. A!SF is inspired by the global Foodsharing movement, which aims to reduce food waste. ​This is achieved by active local food savers and collaborations with stores and restaurants.",
+      "fi": "Emme ole yksin. A!SF on saanut inspiraationsa globaalista Foodsharing-liikkeestä, jonka tavoitteena on vähentää ruokahävikkiä. Tämä saavutetaan aktiivisten paikallisten ruoanpelastajien sekä kauppojen ja ravintoloiden kanssa tehtävän yhteistyön avulla."
+    }
   },
   {
-    "question": "What do we do?​",
-    "answer": "We organise food pickups from collaborating restaurants and shops to reduce the waste of edible goods. But our vision does not spot there. We also share the food at two community fridges on campus and organize events that advocate for food waste reductions."
+    "question": {
+      "en": "How to get involved?",
+      "fi": "Miten pääsen mukaan toimintaan?"
+    },
+    "answer": {
+      "en": "Foodsharing is organised through three levels of engagement. A *Foodsharer* is anyone who helps reduce food waste, for example by picking up shared food from our public fridges. You can join the [Telegram group](https://t.me/+2NxhCayA8bg4ODlk) to get notified whenever food is available. A *Foodsaver* visits our partnering restaurants and supermarkets at agreed times to save edible goods from being thrown away. Before you can join the rescue, you need to attend one introduction pick-up: select [\u201cNext Introduction\u201d](https://forms.office.com/Pages/ResponsePage.aspx?id=JHcarkFAYkSm3FOMsZlwflsYgz6srT9Es-8bnst6eoZURDhSQ1Q3NFgyTEo3OUw2TEI5TjVRN0MwRy4u) to sign up for our next one. Once you have completed the introduction, you can sign up for individual pick-ups on our organising platform, Karrot. The third level is our *Foodvisionaries*, who shape our shared goals and how we reach them. See \u201cWho is behind Aalto Foodsharing and how are we organized?\u201d for more information.",
+      "fi": "Foodsharing toimii kolmella osallistumistasolla. *Foodsharer* on kuka tahansa, joka auttaa vähentämään ruokahävikkiä esimerkiksi noutamalla jaettua ruokaa julkisista jääkaapeistamme. Voit liittyä [Telegram-ryhmäämme](https://t.me/+2NxhCayA8bg4ODlk) saadaksesi ilmoituksen, kun ruokaa on saatavilla. *Foodsaver* vierailee yhteistyöravintoloissa ja -kaupoissa sovittuina aikoina pelastaakseen syömäkelpoista ruokaa roskiin päätymiseltä. Ennen kuin voit liittyä pelastustoimintaan, sinun tulee osallistua yhteen perehdytysnoutoon: valitse [\u201dSeuraava perehdytys\u201d](https://forms.office.com/Pages/ResponsePage.aspx?id=JHcarkFAYkSm3FOMsZlwflsYgz6srT9Es-8bnst6eoZURDhSQ1Q3NFgyTEo3OUw2TEI5TjVRN0MwRy4u) ilmoittautuaksesi seuraavaan perehdytykseen. Perehdytyksen suoritettuasi voit ilmoittautua yksittäisiin noutoihin Karrot-alustallamme. Kolmas taso ovat *Foodvisionäärimme*, jotka pohtivat yhteisiä tavoitteitamme ja niiden saavuttamista. Katso kysymys \u201dKetkä ovat Aalto Foodsharingin takana ja miten olemme organisoituneet?\u201d saadaksesi lisätietoja."
+    }
   },
   {
-    "question": "Who are the people behind Aalto Foodsharing?",
-    "answer": "Aalto Foodsharing began as a student initiative, but we soon expanded beyond the campus. Our volunteer base consists of a wide range of people who share one vision: reducing unnecessary food waste."
+    "question": {
+      "en": "How to collaborate as a food provider?",
+      "fi": "Miten voin tehdä yhteistyötä ruoantarjoajana?"
+    },
+    "answer": {
+      "en": "We partner with supermarkets, restaurants, cafés and event organisers to give surplus edible food a second chance instead of ending up in the bin. Our volunteers pick up your surplus food at agreed times, at no cost to you, and share it through community fridges and food pickups. Download our [Collaboration Pack](documents/Collaboration-Pack.pdf) to learn how a partnership works, what is involved, and how to get started. If you have any questions, our collaboration team, who manages new partnerships, or our operations team, who accompanies existing collaborations, are happy to help. Find the contact details at the end of this page.",
+      "fi": "Teemme yhteistyötä supermarkettien, ravintoloiden, kahviloiden ja tapahtumajärjestäjien kanssa antaaksemme ylijäämäruoalle toisen mahdollisuuden roskiin päätymisen sijaan. Vapaaehtoisemme noutavat ylijäämäruokanne sovittuina aikoina veloituksetta ja jakavat sen yhteisöjääkaappien ja ruoanoutojen kautta. Lataa [yhteistyöpakettimme](documents/Collaboration-Pack.pdf) lukeaksesi, miten kumppanuus toimii, mitä se sisältää ja miten pääset alkuun. Jos sinulla on kysyttävää, yhteistyötiimimme, joka vastaa uusista kumppanuuksista, tai operaatiotiimimme, joka tukee olemassa olevia yhteistyökumppanuuksia, auttavat mielellään. Yhteystiedot löydät tämän sivun lopusta."
+    }
+  },
+  {
+    "question": {
+      "en": "Who is behind Aalto Foodsharing and how are we organized?",
+      "fi": "Ketkä ovat Aalto Foodsharingin takana ja miten olemme organisoituneet?"
+    },
+    "answer": {
+      "en": "Aalto Foodsharing began as a student initiative, but we soon expanded beyond the campus. Our volunteer base consists of a wide range of people who share one vision: reducing unnecessary food waste. Our *Foodvisionaries* shape our shared goals and how we reach them. If you would like to help organise events, connect us with new partners, or share ideas on how to improve our operations, please get in touch using the contact details below. We mainly organise ourselves through subgroups, including strategy, operations & collaborations, marketing & community, and IT. Find the contact point at the end of this page.",
+      "fi": "Aalto Foodsharing sai alkunsa opiskelijalähtöisenä aloitteena, mutta laajenimme pian kampuksen ulkopuolelle. Vapaaehtoispohjamme koostuu monipuolisesta joukosta ihmisiä, joita yhdistää yksi visio: tarpeettoman ruokahävikin vähentäminen. *Foodvisionäärimme* pohtivat yhteisiä tavoitteitamme ja niiden saavuttamista. Jos haluat auttaa tapahtumien järjestämisessä, auttaa meitä löytämään uusia kumppaneita tai sinulla on ideoita toimintamme kehittämiseksi, ota yhteyttä alla olevien yhteystietojen kautta. Organisoidumme pääasiassa alaryhmien kautta, joita ovat strategia, operaatiot ja yhteistyö, markkinointi ja yhteisö sekä IT. Yhteystiedot löydät tämän sivun lopusta."
+    }
   }
 ]
