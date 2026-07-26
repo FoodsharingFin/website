@@ -30,7 +30,10 @@
     "description": { "en": "", "fi": "" },
     "type": { "en": "Community Fridge", "fi": "Yhteisöjääkaappi" },
     "icon_path": "illustrations/SmallFridge.png",
-    "show_where_to_find_us": false
+    "show_where_to_find_us": true,
+    "image": "CommunityFridge.png",
+    "google_maps": "https://maps.app.goo.gl/LZfhFmjByMf8yPZZ7",
+    "open_street_map": "https://www.openstreetmap.org/#map=19/60.195422/24.932764"
   },
   {
     "name": { "en": "K-Market Maarinsolmu", "fi": "K-Market Maarinsolmu" },
@@ -69,7 +72,7 @@
     },
     "type": { "en": "Foodsharing Friends", "fi": "Foodsharing-ystävät" },
     "icon_path": "illustrations/PeoplePower.png",
-    "show_where_to_find_us": true
+    "show_where_to_find_us": false
   }
 ]
 
