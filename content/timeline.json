@@ -1,10 +1,11 @@
 [
+    
     {
         "year": { "en": "March 2024", "fi": "Maaliskuu 2024" },
         "title": { "en": "Aalto Foodsharing launches", "fi": "Aalto Foodsharing käynnistyy" },
         "description": {
             "en": "Aalto Foodsharing officially starts, beginning regular food pickups in collaboration with local partners including K-Market and BakedByEli.",
-            "fi": "Aalto Foodsharing aloittaa virallisesti toimintansa ja käynnistää säännölliset ruoanoudot yhteistyössä paikallisten kumppaneiden, kuten K-Marketin ja BakedByElin, kanssa."
+            "fi": "Aalto Foodsharing aloittaa virallisesti toimintansa ja käynnistää säännölliset ruoanoudot yhteistyössä paikallisten kumppaneiden, kuten K-Marketin ja BakedByEli, kanssa."
         },
         "picture_path": "fidge.JPG",
         "type": "operations"
@@ -197,6 +198,16 @@
             "fi": "Kampuksen useissa jääkaapeissa on nyt erityisiä ruokanjakelualueita, joihin kuka tahansa voi tuoda ylijäänyttä ruokaa. Näihin kuuluu myös Aalto Design Factory."
         },
         "picture_path": "FSatDF.jpg",
+        "type": "operations"
+    },
+    {
+        "year": { "en": "August 2026", "fi": "elokuu 2026" },
+        "title": { "en": "Aalto Foodsharing at OtaOrientierung 2026", "fi": "Aalto Foodsharing klo OtaOrientierung 2026" },
+        "description": {
+            "en": "Foodsharing takes part in the university fair to welcome new Aalto students to the campus and share the spirit of food rescue. We are at the campus testide, among other sustainability initiatives.",
+            "fi": "Foodsharing osallistuu yliopistomessuille toivottaakseen uudet Aalto-opiskelijat tervetulleiksi kampukselle ja levittääkseen ruokahävikin vähentämisen henkeä. Löydät meidät kampuksen Testide-alueelta muiden kestävän kehityksen hankkeiden joukosta."
+        },
+        "picture_path": "OtaOrientiering.jpg",
         "type": "operations"
     }
 ]
