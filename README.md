@@ -13,6 +13,8 @@ content/*.json        All editable text content (see below)
 documents/            Downloadable PDFs referenced from content/audience.json
 illustrations/         Icons/illustrations referenced from content JSON and inline HTML
 pictures/             Timeline photos referenced from content/timeline.json
+robots.txt            Search-engine crawl rules; points crawlers to sitemap.xml
+sitemap.xml           Indexable URLs — update when adding/renaming downloadable documents
 ```
 
 ## Build
@@ -75,14 +77,22 @@ Drives the "Join the Rescue" flow (`#join`, `#join/<key>`). Each top-level key (
   "icon_path": "illustrations/....png",
   "hyperlinks": { "Label": { "subtitle": {"en":"...","fi":"..."}, "url": "..." } },
   "files": { "Label": { "title": {"en":"...","fi":"..."}, "path": "documents/....pdf" } },
-  "contact": { "Role name": ["email@..."] }
+  "contact": { "Role name": ["base64-encoded-email..."] }   // see "Email addresses" section below
 }
 ```
 
 Adding a new top-level key here automatically adds a card to the `#join` selection screen and a new `#join/<key>` subpage — no HTML changes required.
 
 ### `contact.json`
-Powers the `#contact` section cards: `{ "Role": { "description": {"en":"...","fi":"..."}, "mail": "..." } }`.
+Powers the `#contact` section cards: `{ "Role": { "description": {"en":"...","fi":"..."}, "mail_b64": "..." } }`. See "Email addresses" below for what `mail_b64` means.
+
+### Email addresses
+
+Every email in `content/*.json` (and the footer in `index.html`) is stored base64-encoded (`mail_b64` in `contact.json`, the `contact` arrays in `audience.json`) and decoded at render time with `atob()`. This keeps plain-text addresses out of the raw JSON/HTML source so basic scrapers can't harvest them just by reading the files. To add or change an address, base64-encode it first, e.g. `btoa("name@example.com")` in a browser console, or in PowerShell:
+```
+[Convert]::ToBase64String([Text.Encoding]::UTF8.GetBytes("name@example.com"))
+```
+This isn't cryptographic security — anyone can decode base64 — it only deters naive automated harvesting.
 
 ## Markdown in content text
 

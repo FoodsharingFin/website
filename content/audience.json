@@ -53,7 +53,7 @@
       }
     },
     "contact": {
-      "Foodsharing Strategy": ["strategy@foodsharing.fi"]
+      "Foodsharing Strategy": ["c3RyYXRlZ3lAZm9vZHNoYXJpbmcuZmk="]
     }
   },
   "foodprovider": {
@@ -81,8 +81,8 @@
       }
     },
     "contact": {
-      "Foodsharing Collaboration": ["collaboration@foodsharing.fi"],
-      "Foodsharing Operations": ["operations@foodsharing.fi"]
+      "Foodsharing Collaboration": ["Y29sbGFib3JhdGlvbkBmb29kc2hhcmluZy5maQ=="],
+      "Foodsharing Operations": ["b3BlcmF0aW9uc0Bmb29kc2hhcmluZy5maQ=="]
     }
   }
 }

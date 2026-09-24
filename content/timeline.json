@@ -209,5 +209,15 @@
         },
         "picture_path": "OtaOrientiering.jpg",
         "type": "operations"
+    },
+    {
+        "year": { "en": "September 2026", "fi": "Syyskuu 2026" },
+        "title": { "en": "Welcome to Aalto: Community Dinner", "fi": "Tervetuloa Aaltoon: yhteisöllinen illallinen" },
+        "description": {
+            "en": "Foodsharing welcomes new students at the campus with a community dinner, where we cook and share food together that has been rescued.",
+            "fi": "Foodsharing toivottaa uudet opiskelijat tervetulleiksi kampukselle yhteisöllisellä illallisella, jossa valmistamme ja jaamme yhdessä pelastettua ruokaa."
+        },
+        "picture_path": "semester_kick_off_autum_2026.jpeg",
+        "type": "operations"
     }
 ]

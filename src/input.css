@@ -3,6 +3,12 @@
 @tailwind utilities;
 
 @layer base {
+  html {
+    /* This site only ships a light theme; opt out of browser/OS "forced dark mode"
+       heuristics, which were inverting brand colors and images unpredictably. */
+    color-scheme: only light;
+  }
+
   body {
     font-family: 'Plus Jakarta Sans', sans-serif;
     background-color: #fdf9ec;
