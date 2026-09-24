@@ -479,9 +479,11 @@
     // 1. Initialize map and global layers
     if (!window._afs_map) {
       window._afs_map = L.map('map', { scrollWheelZoom: false, zoomControl: true }).setView([60.185139, 24.825308], 13);
-      L.tileLayer('https://{s}.basemaps.cartocdn.com/light_nolabels/{z}/{x}/{y}{r}.png', {
-        maxZoom: 20,
-        attribution: '&copy; OpenStreetMap contributors &copy; CARTO'
+      // CARTO's free basemaps.cartocdn.com tiles now require a paid/registered API key; Esri's gray canvas is the closest key-free, label-free equivalent.
+      L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Light_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+        maxZoom: 19,
+        maxNativeZoom: 16,
+        attribution: 'Tiles &copy; Esri &mdash; Esri, DeLorme, NAVTEQ'
       }).addTo(window._afs_map);
       window._afs_layers_by_type = {};
       window._afs_spiderLines = L.layerGroup().addTo(window._afs_map);
